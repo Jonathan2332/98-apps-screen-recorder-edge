@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="thumb_width">100dp</dimen>
+    <dimen name="thumb_height">125dp</dimen>
+
+    <dimen name="text_16sp">16sp</dimen>
+    <dimen name="text_18sp">18sp</dimen>
+
+    <dimen name="layout_25dp">25dp</dimen>
+    <dimen name="layout_50dp">50dp</dimen>
+
+    <dimen name="anim_width">1dp</dimen>
+    <dimen name="anim_height">1dp</dimen>
+</resources>

@@ -1,0 +1,352 @@
+<resources>
+    <string name="app_name">Screen Recorder Edge</string>
+    <string name="description_edge_single_plus">Simple screen recorder for edge panel</string>
+    <string name="description_button_rec">Button Start/Stop Recording</string>
+    <string name="key_record_mic" translatable="false">key_record_mic</string>
+    <string name="summary_record_mic">Record external audio using the microphone</string>
+    <string name="url_rate" translatable="false">http://apps.samsung.com/appquery/appDetail.as?appId=a98apps.recorderedge</string>
+    <string name="title_video_quality">Video Quality</string>
+    <string name="key_video_quality" translatable="false">key_video_quality</string>
+    <string name="summary_donation">If you want to make a donation to support my app :)</string>
+    <string name="key_donate" translatable="false">key_donate</string>
+    <string name="title_donate">Donate</string>
+    <string name="key_recording_notification" translatable="false">key_recording_notification</string>
+    <string name="summary_recording_notification">Manage notifications while recording or when finished</string>
+    <string name="title_recording_notification">Show Notifications</string>
+    <string name="title_finish_action">Finish Recording Action</string>
+    <string name="key_finish_action" translatable="false">key_finish_action</string>
+    <string name="description_image">Preview Image of Video</string>
+    <string name="started" translatable="false">started</string>
+    <string name="key_version" translatable="false">key_version</string>
+    <string name="title_audio_quality">Audio Quality</string>
+    <string name="key_audio_quality" translatable="false">key_audio_quality</string>
+    <string name="title_video_orientation">Video Orientation</string>
+    <string name="key_video_orientation" translatable="false">key_video_orientation</string>
+    <string name="title_video_resolution">Video Resolution</string>
+    <string name="key_audio_channel" translatable="false">key_audio_channel</string>
+    <string name="title_audio_channel">Audio Channel</string>
+    <string name="description_list_videos">Button List Videos</string>
+    <string name="description_button_settings">Button Open Settings</string>
+    <string name="summary_rate_app">Rate the app in Galaxy Store!</string>
+    <string name="title_rate_app">Rate us</string>
+    <string name="title_record_mic">Record Microphone</string>
+    <string name="summary_info_fps">The videos will be recorded in 60 FPS by default. The higher the resolution and the quality of the video, the larger the file size. Using HEVC encoder will save you more space.</string>
+    <string name="file_not_exist">The file not exist!</string>
+    <string name="error_on_delete">Error on delete</string>
+    <string name="deleted_successfully">Deleted successfully!</string>
+    <string name="share_with">Share with…</string>
+    <string name="notification_finish_disabled">Notification finish are disabled</string>
+    <string name="notifications_are_disabled">Notifications are disabled</string>
+    <string name="give_overlay_permission">Give overlay permission to show pop-up!</string>
+    <string name="video_recorded">Video Recorded</string>
+    <string name="what_you_do">What do you want to do?</string>
+    <string name="text_watch_caps">WATCH</string>
+    <string name="text_share_caps">SHARE</string>
+    <string name="text_delete_caps">DELETE</string>
+    <string name="text_watch">Watch</string>
+    <string name="text_share">Share</string>
+    <string name="text_delete">Delete</string>
+    <string name="recording_finished">Recording Finished</string>
+    <string name="failed_get_external_storage">Failed to get storage free space</string>
+    <string name="failed_create_directory">Failed to create recording directory</string>
+    <string name="stopped_low_memory">Recording stopped, file size limit reached</string>
+    <string name="little_memory_available">Little memory available</string>
+    <string name="failed_prepare_recorder">"Message: An error occurred while starting the recording, please send us a report so we can identify the problem and resolve it as soon as possible.\nError: Failed to prepare the recorder\nLog Message: "</string>
+    <string name="text_stop">Stop</string>
+    <string name="text_recording">Recording</string>
+    <string name="microphone_in_use">Microphone is already in use from another app!</string>
+    <string name="permission_denied">Permission Denied</string>
+    <string name="write_permission_needed">Write permission is needed to save recorded file</string>
+    <string name="microphone_permission_needed">Record Audio permission is needed to use microphone</string>
+    <string name="text_size">"Size: "</string>
+    <string name="text_duration">Duration:</string>
+    <string name="text_resolution">Resolution:</string>
+    <string name="text_unknown">Unknown</string>
+    <string name="record_notification">Record Notification</string>
+    <string name="finish_notification">Finish Notification</string>
+    <string name="description_notification_finish">Displays a notification on record finish</string>
+    <string name="description_notification_recording">Displays a notification while recording</string>
+    <string name="url_donate" translatable="false"><![CDATA[https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=XNNQNLN87TGXL&source=url]]></string>
+    <string name="title_settings_activity">"  Settings"</string>
+    <string name="category_notifications">Notifications</string>
+    <string name="category_other">Other</string>
+    <string name="text_version">Version</string>
+    <string name="category_audio">Audio</string>
+    <string name="category_video">Video</string>
+    <string name="key_hide_icon" translatable="false">key_hide_icon</string>
+    <string name="summary_hide_icon">Hide the application of launcher</string>
+    <string name="title_hide_icon">Hide Application</string>
+    <string name="text_5_seconds_disappear">It may take up to 5 seconds to disappear</string>
+    <string name="text_5_seconds_appear">It may take up to 5 seconds to appear</string>
+    <string name="enable_the_panel">Enable the panel</string>
+    <string name="key_video_encoder" translatable="false">key_video_encoder</string>
+    <string name="title_video_encoder">Video Encoder</string>
+    <string name="key_hevc_resolution" translatable="false">key_hevc_resolution</string>
+    <string name="key_mpeg_resolution" translatable="false">key_mpeg_resolution</string>
+    <string name="key_category_video" translatable="false">key_category_video</string>
+    <string name="title_report_bug">Report Bug</string>
+    <string name="summary_report_bug">Please email us with details</string>
+    <string name="key_report_bug" translatable="false">key_report_bug</string>
+    <string name="please_write_details">Please write in detail what is the problem</string>
+    <string name="dont_remove_information_text">Please don\'t remove this information</string>
+    <string name="send_email">Send email with…</string>
+    <string name="report_bug_error">Couldn\'t find an email app or account</string>
+    <string name="text_recording_started">Recording Started</string>
+    <string name="tap_to_dismiss">\nTap here to dismiss the notification</string>
+    <string name="text_go">GO</string>
+    <string name="summary_info_size">The maximum recording file size is 4 GB. You can record on average 80 minutes using a high quality setting. To increase recording time, lower the resolution and video quality.</string>
+    <string name="title_audio_source">Audio Source</string>
+    <string name="key_audio_source" translatable="false">key_audio_source</string>
+    <string name="summary_info_audio">If microphone recording is disabled, no audio will be recorded. Recording only internal audio (system sounds, applications, and so on) is not allowed by Android/Google natively. You can only record internal audio using the microphone.\n\nIf you are using headphones, the headset microphone will be recorded (if available) and the audio source setting will be ignored.</string>
+    <string name="failed_report_message">"Message: An error occurred, please send us a report so we can identify the problem and resolve it as soon as possible.\nLog Message: "</string>
+    <string name="failed_report_message_encoder">"Message: An error has occurred, we suggest you to change the video encoder in the settings and restart the device. If the problem still persists, please send us a report to identify the problem and resolve it as soon as possible.\nLog Message: "</string>
+    <string name="text_send">Send</string>
+    <string name="key_record_path" translatable="false">key_record_path</string>
+    <string name="title_record_path">Storage Location</string>
+    <string name="text_storage">Storage</string>
+    <string name="title_file_format">File Format</string>
+    <string name="key_file_format" translatable="false">key_file_format</string>
+    <string name="key_audio_encoder" translatable="false">key_audio_encoder</string>
+    <string name="title_audio_encoder">Audio Encoder</string>
+    <string name="key_reset_config" translatable="false">key_reset_config</string>
+    <string name="summary_reset_settings">Reset the settings to default</string>
+    <string name="title_reset_settings">Reset Settings</string>
+    <string name="text_settings_reseted">Settings Reseted!</string>
+    <string name="text_failed_create_file">Failed to create file recording</string>
+    <string name="error_read_file">Error on read record file</string>
+    <string name="permission_storage_needed">Permission is required to read and write the recording file!</string>
+    <string name="failed_get_storage">Failed to get storage</string>
+    <string name="failed_grant_permission">Failed to grant permission</string>
+    <string name="message_path_not_found">The storage path not exist or the external storage is not accessible or has been deleted, please, select other path to save the recorded files.</string>
+    <string name="summary_info_encoder_h264"><b>Important Information\'s\n\n</b><b>H264</b> is the encoder that can record in high definition and full screen, however if you record the video using this encoder and the video does not present any image, we suggest using another encoder.</string>
+    <string name="summary_info_encoder_mpeg4"><b>MPEG4</b> is the most limited encoder in resolution, supports 360p up to 900p resolution in full screen and 960p in 2:1 and 1080p in 16:9 (not full screen). Your device may not be able to use this encoder.</string>
+    <string name="summary_info_encoder_hevc"><b>HEVC</b> is the more efficient encoder and recommended if you want to save more space, but you may not be able to play HEVC videos on other devices or share them online.</string>
+    <string name="failed_get_log">Failed to get log</string>
+
+    <string-array name="pref_finish_action_entries">
+        <item>Nothing</item>
+        <item>Show Notification</item>
+        <item>Show PopUp</item>
+        <item>Show Videos</item>
+    </string-array>
+
+    <string-array name="pref_finish_action_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string-array name="pref_audio_quality_entries">
+        <item>Ultra - 512kbps, 48kHz</item>
+        <item>High - 256kbps, 48kHz</item>
+        <item>Mid - 128kbps, 44.1kHz</item>
+        <item>Low - 64kbps, 44.1kHz</item>
+    </string-array>
+
+    <string-array name="pref_audio_quality_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string-array name="pref_audio_source_entries">
+        <item>Microphone Bottom</item>
+        <item>Microphone Bottom and Top</item>
+    </string-array>
+
+    <string-array name="pref_audio_source_values">
+        <item>1</item>
+        <item>5</item>
+    </string-array>
+
+    <string-array name="pref_audio_encoder_entries">
+        <item>AAC</item>
+        <item>HE_AAC</item>
+    </string-array>
+
+    <string-array name="pref_audio_encoder_values">
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+
+    <string-array name="pref_audio_channel_entries">
+        <item>Mono (Recommended)</item>
+        <item>Stereo</item>
+    </string-array>
+
+    <string-array name="pref_audio_channel_values">
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+    <string-array name="pref_video_orientation_entries">
+        <item>Auto</item>
+        <item>Portrait</item>
+        <item>Landscape</item>
+    </string-array>
+
+    <string-array name="pref_video_orientation_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+    <string-array name="pref_video_encoder_entries">
+        <item>H.264</item>
+        <item>MPEG_4_SP</item>
+        <item>H.265 (HEVC)</item>
+    </string-array>
+
+    <string-array name="pref_video_encoder_values">
+        <item>2</item>
+        <item>3</item>
+        <item>5</item>
+    </string-array>
+
+    <string-array name="pref_hevc_resolution_entries">
+        <item>Current device resolution</item>
+        <item>1440p</item>
+        <item>1080p</item>
+        <item>720p</item>
+        <item>540p</item>
+        <item>480p</item>
+        <item>360p</item>
+    </string-array>
+
+    <string-array name="pref_hevc_resolution_values">
+        <item>0</item>
+        <item>1440</item>
+        <item>1080</item>
+        <item>720</item>
+        <item>540</item>
+        <item>480</item>
+        <item>360</item>
+    </string-array>
+
+    <string-array name="pref_mpeg4_resolution_entries">
+        <item>1080p (16:9)</item>
+        <item>960p (2:1)</item>
+        <item>900p</item>
+        <item>720p</item>
+        <item>540p</item>
+        <item>480p</item>
+        <item>360p</item>
+    </string-array>
+
+    <string-array name="pref_mpeg4_resolution_values">
+        <item>1080</item>
+        <item>960</item>
+        <item>900</item>
+        <item>720</item>
+        <item>540</item>
+        <item>480</item>
+        <item>360</item>
+    </string-array>
+
+    <string-array name="pref_video_quality_entries">
+        <item>Auto (based on resolution and encoder)</item>
+        <item>24 Mbps</item>
+        <item>22 Mbps</item>
+        <item>20 Mbps</item>
+        <item>18 Mbps</item>
+        <item>16 Mbps</item>
+        <item>14 Mbps</item>
+        <item>12 Mbps</item>
+        <item>10 Mbps</item>
+        <item>9 Mbps</item>
+        <item>8 Mbps</item>
+        <item>7 Mbps</item>
+        <item>6 Mbps</item>
+        <item>5 Mbps</item>
+        <item>4 Mbps</item>
+        <item>3 Mbps</item>
+        <item>2.5 Mbps</item>
+        <item>2 Mbps</item>
+        <item>1.5 Mbps</item>
+        <item>1 Mbps</item>
+        <item>512 Kbps</item>
+        <item>256 Kbps</item>
+    </string-array>
+
+    <string-array name="pref_video_quality_values">
+        <item>0</item>
+        <item>24576</item>
+        <item>22528</item>
+        <item>20480</item>
+        <item>18432</item>
+        <item>16384</item>
+        <item>14336</item>
+        <item>12288</item>
+        <item>10240</item>
+        <item>9216</item>
+        <item>8192</item>
+        <item>7168</item>
+        <item>6144</item>
+        <item>5120</item>
+        <item>4096</item>
+        <item>3072</item>
+        <item>2560</item>
+        <item>2048</item>
+        <item>1536</item>
+        <item>1024</item>
+        <item>512</item>
+        <item>256</item>
+    </string-array>
+
+    <string-array name="pref_file_format_array_entries">
+        <item>yy_MM_dd_HH_mm_ss</item>
+        <item>yyyy_MM_dd_HH_mm_ss</item>
+        <item>yy_dd_MM_HH_mm_ss</item>
+        <item>yyyy_dd_MM_HH_mm_ss</item>
+        <item>dd_MM_yy_HH_mm_ss</item>
+        <item>dd_MM_yyyy_HH_mm_ss</item>
+        <item>MM_dd_yy_HH_mm_ss</item>
+        <item>MM_dd_yyyy_HH_mm_ss</item>
+        <item>yyMMdd_HHmmss</item>
+        <item>yyyyMMdd_HHmmss</item>
+        <item>yyddMM_HHmmss</item>
+        <item>yyyyddMM_HHmmss</item>
+        <item>ddMMyy_HHmmss</item>
+        <item>ddMMyyyy_HHmmss</item>
+        <item>MMddyy_HHmmss</item>
+        <item>MMddyyyy_HHmmss</item>
+        <item>yy-MM-dd_HH-mm-ss</item>
+        <item>yyyy-MM-dd_HH-mm-ss</item>
+        <item>yy-dd-MM_HH-mm-ss</item>
+        <item>yyyy-dd-MM_HH-mm-ss</item>
+        <item>dd-MM-yy_HH-mm-ss</item>
+        <item>dd-MM-yyyy_HH-mm-ss</item>
+        <item>MM-dd-yy_HH-mm-ss</item>
+        <item>MM-dd-yyyy_HH-mm-ss</item>
+    </string-array>
+
+    <string-array name="pref_file_format_array_values">
+        <item>yy_MM_dd_HH_mm_ss</item>
+        <item>yyyy_MM_dd_HH_mm_ss</item>
+        <item>yy_dd_MM_HH_mm_ss</item>
+        <item>yyyy_dd_MM_HH_mm_ss</item>
+        <item>dd_MM_yy_HH_mm_ss</item>
+        <item>dd_MM_yyyy_HH_mm_ss</item>
+        <item>MM_dd_yy_HH_mm_ss</item>
+        <item>MM_dd_yyyy_HH_mm_ss</item>
+        <item>yyMMdd_HHmmss</item>
+        <item>yyyyMMdd_HHmmss</item>
+        <item>yyddMM_HHmmss</item>
+        <item>yyyyddMM_HHmmss</item>
+        <item>ddMMyy_HHmmss</item>
+        <item>ddMMyyyy_HHmmss</item>
+        <item>MMddyy_HHmmss</item>
+        <item>MMddyyyy_HHmmss</item>
+        <item>yy-MM-dd_HH-mm-ss</item>
+        <item>yyyy-MM-dd_HH-mm-ss</item>
+        <item>yy-dd-MM_HH-mm-ss</item>
+        <item>yyyy-dd-MM_HH-mm-ss</item>
+        <item>dd-MM-yy_HH-mm-ss</item>
+        <item>dd-MM-yyyy_HH-mm-ss</item>
+        <item>MM-dd-yy_HH-mm-ss</item>
+        <item>MM-dd-yyyy_HH-mm-ss</item>
+    </string-array>
+
+</resources>

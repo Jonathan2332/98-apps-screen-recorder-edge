@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@drawable/divider">
+
+    <ImageView
+        android:id="@+id/thumb_video"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:contentDescription="@string/description_image" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/name_video"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorDarkGrey"
+            android:textSize="@dimen/text_18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/size_video"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_16sp" />
+
+        <TextView
+            android:id="@+id/resolution_video"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_16sp" />
+
+        <TextView
+            android:id="@+id/duration_video"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_16sp" />
+
+        <LinearLayout
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/watch_video"
+                android:layout_width="@dimen/layout_25dp"
+                android:layout_height="@dimen/layout_25dp"
+                android:backgroundTint="@color/colorAccent"
+                android:background="@drawable/ic_play"
+                style="?android:attr/borderlessButtonStyle"/>
+
+            <Button
+                android:id="@+id/share_video"
+                android:layout_width="@dimen/layout_25dp"
+                android:layout_height="@dimen/layout_25dp"
+                android:layout_marginLeft="@dimen/layout_50dp"
+                android:layout_marginRight="@dimen/layout_50dp"
+                android:backgroundTint="@color/colorAccent"
+                android:background="@drawable/ic_share"
+                style="?android:attr/borderlessButtonStyle"/>
+
+            <Button
+                android:id="@+id/delete_video"
+                android:layout_width="@dimen/layout_25dp"
+                android:layout_height="@dimen/layout_25dp"
+                android:backgroundTint="@color/colorAccent"
+                android:background="@drawable/ic_delete"
+                style="?android:attr/borderlessButtonStyle"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
