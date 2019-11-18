@@ -5,8 +5,6 @@ Este projeto foi idealizado apenas para fazer parte do meu portfólio como demon
 
 **Também disponível na Galaxy Store.**
 
-**O código disponível no GitHub é da versão da Galaxy Store.**
-
 ### O que é este projeto?
 
 Este é um aplicativo que grava a tela do seu telefone e audio do microfone. Sua diferença é que ele é usado pelo painel edge, um recurso disponível em dispositivos Samsung (linha Galaxy S e Note). Este aplicativo foi desenvolvido utilizando o [SDK Edge(Look)](https://developer.samsung.com/galaxy/edge) da Samsung e é exclusivo para dispositivos Samsung que possuam a tela edge.
@@ -22,4 +20,3 @@ Este é um aplicativo que grava a tela do seu telefone e audio do microfone. Sua
 * [StandOutWindow](https://github.com/pingpongboss/StandOut) (Biblioteca para criar janelas flutuantes)
 * [Edge(Look) SDK](https://developer.samsung.com/galaxy/edge) (SDK da Samsung utilizado para criar painéis edge)
 * [Glide](https://github.com/bumptech/glide) (Para trabalhar com thumbnails dos vídeos gravados)
-* [Google Play Billing Library](https://developer.android.com/google/play/billing/billing_library_overview?hl=pt-br) (Usado para sistema de doações, usado na versão Play Store)

@@ -14,6 +14,7 @@
         android:src="@mipmap/ic_button_rec"
         android:contentDescription="@string/description_button_rec" />
 
+
     <ImageView
         android:id="@+id/button_list"
         android:layout_width="28dp"
@@ -22,15 +23,28 @@
         android:layout_centerInParent="true"
         android:layout_below="@id/button_rec"
         android:src="@mipmap/ic_list"
+        android:visibility="gone"
         android:contentDescription="@string/description_list_videos" />
 
     <ImageView
-        android:id="@+id/button_settings"
-        android:layout_width="25dp"
-        android:layout_height="25dp"
+        android:id="@+id/button_mic"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
         android:layout_marginTop="20dp"
         android:layout_centerInParent="true"
         android:layout_below="@id/button_list"
+        android:src="@drawable/ic_mic_on"
+        android:visibility="gone"
+        android:contentDescription="@string/description_button_mic" />
+
+
+    <ImageView
+        android:id="@+id/button_settings"
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="20dp"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/button_mic"
         android:src="@drawable/ic_settings"
         android:contentDescription="@string/description_button_settings" />
 

@@ -9,12 +9,15 @@ import android.content.Intent;
 import android.media.projection.MediaProjection;
 import android.media.projection.MediaProjectionManager;
 import android.os.Build;
+import android.view.View;
 import android.widget.RemoteViews;
+import android.widget.Toast;
 
 import com.samsung.android.sdk.look.cocktailbar.SlookCocktailManager;
 import com.samsung.android.sdk.look.cocktailbar.SlookCocktailProvider;
 
 import a98apps.recorderedge.R;
+import a98apps.recorderedge.constants.Constants;
 import a98apps.recorderedge.util.RecordService;
 import a98apps.recorderedge.util.RequestPermission;
 import a98apps.recorderedge.util.SecurityPreferences;
@@ -75,6 +78,17 @@ public class CocktailScreenRecorder extends SlookCocktailProvider {
         stateView.setOnClickPendingIntent(R.id.button_rec, getClickIntent(context, R.id.button_rec));
         stateView.setOnClickPendingIntent(R.id.button_settings, getClickIntent(context, R.id.button_settings));
         stateView.setOnClickPendingIntent(R.id.button_list, getClickIntent(context, R.id.button_list));
+        stateView.setOnClickPendingIntent(R.id.button_mic, getClickIntent(context, R.id.button_mic));
+
+        if(mSecurityPreferences == null)
+            mSecurityPreferences = new SecurityPreferences(context);
+
+        if(Boolean.parseBoolean(mSecurityPreferences.getSetting(Constants.SHOW_BUTTON_MIC)))
+            stateView.setViewVisibility(R.id.button_mic, View.VISIBLE);
+
+        if(Boolean.parseBoolean(mSecurityPreferences.getSetting(Constants.SHOW_BUTTON_VIDEOS)))
+            stateView.setViewVisibility(R.id.button_list, View.VISIBLE);
+
         return stateView;
     }
     private PendingIntent getClickIntent(Context context, int id) {
@@ -107,6 +121,24 @@ public class CocktailScreenRecorder extends SlookCocktailProvider {
                 context.startActivity(new Intent(context, ListVideos.class)
                         .setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK));
                 break;
+            case R.id.button_mic:
+                if (mMediaProjection != null)
+                {
+                    Toast.makeText(context, context.getString(R.string.warning_mic_while_recording), Toast.LENGTH_LONG).show();
+                    return;
+                }
+                if(mSecurityPreferences == null)
+                    mSecurityPreferences = new SecurityPreferences(context);
+
+                boolean record = Boolean.parseBoolean(mSecurityPreferences.getSetting(Constants.RECORD_MIC));
+
+                if (record)
+                    mSecurityPreferences.saveSetting(Constants.RECORD_MIC, String.valueOf(false));
+                else
+                    mSecurityPreferences.saveSetting(Constants.RECORD_MIC, String.valueOf(true));
+
+                updateButtonMic(context, !record);
+                break;
             default:
                 break;
 
@@ -124,6 +156,34 @@ public class CocktailScreenRecorder extends SlookCocktailProvider {
             mClickStateView.setImageViewResource(R.id.button_rec, R.mipmap.ic_button_stop);
         else
             mClickStateView.setImageViewResource(R.id.button_rec, R.mipmap.ic_button_rec);
+
+        cocktailManager.updateCocktail(cocktailIds[0], mClickStateView);
+    }
+    public void updateButtonMic(Context context, boolean record)
+    {
+        SlookCocktailManager cocktailManager = SlookCocktailManager.getInstance(context);
+        int[] cocktailIds = cocktailManager.getCocktailIds(new ComponentName(context, CocktailScreenRecorder.class));
+        if(mClickStateView == null)
+            mClickStateView = createStateView(context);
+
+        if (record)
+            mClickStateView.setImageViewResource(R.id.button_mic, R.drawable.ic_mic_on);
+        else
+            mClickStateView.setImageViewResource(R.id.button_mic, R.drawable.ic_mic_off);
+
+        cocktailManager.updateCocktail(cocktailIds[0], mClickStateView);
+    }
+    public void updateButtons(Context context, int id, boolean show)
+    {
+        SlookCocktailManager cocktailManager = SlookCocktailManager.getInstance(context);
+        int[] cocktailIds = cocktailManager.getCocktailIds(new ComponentName(context, CocktailScreenRecorder.class));
+        if(mClickStateView == null)
+            mClickStateView = createStateView(context);
+
+        if (show)
+            mClickStateView.setViewVisibility(id, View.VISIBLE);
+        else
+            mClickStateView.setViewVisibility(id, View.GONE);
 
         cocktailManager.updateCocktail(cocktailIds[0], mClickStateView);
     }

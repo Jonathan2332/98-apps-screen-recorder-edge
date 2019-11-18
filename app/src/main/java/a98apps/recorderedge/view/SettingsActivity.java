@@ -33,6 +33,7 @@ import java.util.Objects;
 import a98apps.recorderedge.BuildConfig;
 import a98apps.recorderedge.R;
 import a98apps.recorderedge.constants.Constants;
+import a98apps.recorderedge.edge.CocktailScreenRecorder;
 import a98apps.recorderedge.util.SecurityPreferences;
 import a98apps.recorderedge.util.SelectPath;
 
@@ -72,12 +73,23 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
 
             mViewHolder.hevc = findPreference(getString(R.string.key_hevc_resolution));
             mViewHolder.mpeg = findPreference(getString(R.string.key_mpeg_resolution));
-            mViewHolder.category = (PreferenceCategory) findPreference(getString(R.string.key_category_video));
+            mViewHolder.categoryVideo = (PreferenceCategory) findPreference(getString(R.string.key_category_video));
+
+            mViewHolder.mic = findPreference(getString(R.string.key_record_mic));
+            mViewHolder.categoryAudio = (PreferenceCategory) findPreference("key_category_audio");
 
             PreferencesListener listener = new PreferencesListener(mViewHolder, mSecurityPreferences);
 
             Preference hide = findPreference(getString(R.string.key_hide_icon));
             hide.setOnPreferenceChangeListener(listener);
+
+            Preference showMic = findPreference(getString(R.string.key_show_mic));
+            showMic.setOnPreferenceChangeListener(listener);
+
+            listener.onPreferenceChange(showMic, PreferenceManager.getDefaultSharedPreferences(showMic.getContext()).getBoolean(showMic.getKey(), false));
+
+            Preference showVideos = findPreference(getString(R.string.key_show_videos));
+            showVideos.setOnPreferenceChangeListener(listener);
 
             // video quality preference change listener
             bindPreferenceSummaryToValue(findPreference(getString(R.string.key_video_quality)), "0", listener);
@@ -278,7 +290,6 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
         @Override
         public boolean onPreferenceChange(Preference preference, Object newValue) {
             String stringValue = newValue.toString();
-
             if (preference instanceof ListPreference) {
                 // For list preferences, look up the correct display value in
                 // the preference's 'entries' list.
@@ -292,14 +303,14 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
                 {
                     if(Integer.parseInt(stringValue) == 3)
                     {
-                        mViewHolder.category.addPreference(mViewHolder.mpeg);
-                        mViewHolder.category.removePreference(mViewHolder.hevc);
+                        mViewHolder.categoryVideo.addPreference(mViewHolder.mpeg);
+                        mViewHolder.categoryVideo.removePreference(mViewHolder.hevc);
                         bindPreferenceSummaryToValue(mViewHolder.mpeg,"720", this);
                     }
                     else
                     {
-                        mViewHolder.category.removePreference(mViewHolder.mpeg);
-                        mViewHolder.category.addPreference(mViewHolder.hevc);
+                        mViewHolder.categoryVideo.removePreference(mViewHolder.mpeg);
+                        mViewHolder.categoryVideo.addPreference(mViewHolder.hevc);
                         bindPreferenceSummaryToValue(mViewHolder.hevc,"0", this);
                     }
                 }
@@ -307,22 +318,61 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
             }
             else if(preference instanceof SwitchPreference)
             {
-                if(preference.getKey().equals("key_hide_icon"))
+                switch (preference.getKey())
                 {
-                    if(Boolean.parseBoolean(stringValue))
+                    case "key_hide_icon":
+                        if (Boolean.parseBoolean(stringValue))
+                        {
+                            ComponentName componentToEnable = new ComponentName(preference.getContext(), LauncherActivity.class);
+                            PackageManager pm = preference.getContext().getPackageManager();
+                            pm.setComponentEnabledSetting(componentToEnable, PackageManager.COMPONENT_ENABLED_STATE_DISABLED, PackageManager.DONT_KILL_APP);
+                            Toast.makeText(preference.getContext(), preference.getContext().getString(R.string.text_5_seconds_disappear), Toast.LENGTH_SHORT).show();
+                        }
+                        else
+                        {
+                            ComponentName componentToEnable = new ComponentName(preference.getContext(), LauncherActivity.class);
+                            PackageManager pm = preference.getContext().getPackageManager();
+                            pm.setComponentEnabledSetting(componentToEnable, PackageManager.COMPONENT_ENABLED_STATE_ENABLED, PackageManager.DONT_KILL_APP);
+                            Toast.makeText(preference.getContext(), preference.getContext().getString(R.string.text_5_seconds_appear), Toast.LENGTH_SHORT).show();
+                        }
+                        break;
+                    case "key_show_mic":
                     {
-                        ComponentName componentToEnable = new ComponentName(preference.getContext(), LauncherActivity.class);
-                        PackageManager pm = preference.getContext().getPackageManager();
-                        pm.setComponentEnabledSetting(componentToEnable, PackageManager.COMPONENT_ENABLED_STATE_DISABLED, PackageManager.DONT_KILL_APP);
-                        Toast.makeText(preference.getContext(), preference.getContext().getString(R.string.text_5_seconds_disappear), Toast.LENGTH_SHORT).show();
+                        CocktailScreenRecorder panel = new CocktailScreenRecorder();
+                        if (Boolean.parseBoolean(stringValue))
+                        {
+                            mViewHolder.categoryAudio.removePreference(mViewHolder.mic);
+                            panel.updateButtons(preference.getContext(), R.id.button_mic, true);
+                            panel.updateButtonMic(preference.getContext(), mViewHolder.mic.getSharedPreferences().getBoolean("key_record_mic", true));
+                        }
+                        else
+                        {
+                            mViewHolder.categoryAudio.addPreference(mViewHolder.mic);
+                            panel.updateButtons(preference.getContext(), R.id.button_mic, false);
+                            panel.updateButtonMic(preference.getContext(),  mViewHolder.mic.getSharedPreferences().getBoolean("key_record_mic", true));
+                        }
+                        break;
                     }
-                    else
+                    case "key_record_mic":
                     {
-                        ComponentName componentToEnable = new ComponentName(preference.getContext(), LauncherActivity.class);
-                        PackageManager pm = preference.getContext().getPackageManager();
-                        pm.setComponentEnabledSetting(componentToEnable, PackageManager.COMPONENT_ENABLED_STATE_ENABLED, PackageManager.DONT_KILL_APP);
-                        Toast.makeText(preference.getContext(), preference.getContext().getString(R.string.text_5_seconds_appear), Toast.LENGTH_SHORT).show();
+                        CocktailScreenRecorder panel = new CocktailScreenRecorder();
+                        if (Boolean.parseBoolean(stringValue))
+                            panel.updateButtonMic(preference.getContext(), true);
+                        else
+                            panel.updateButtonMic(preference.getContext(), false);
+                        break;
                     }
+                    case "key_show_videos":
+                    {
+                        CocktailScreenRecorder panel = new CocktailScreenRecorder();
+                        if (Boolean.parseBoolean(stringValue))
+                            panel.updateButtons(preference.getContext(), R.id.button_list, true);
+                        else
+                            panel.updateButtons(preference.getContext(), R.id.button_list, false);
+                        break;
+                    }
+                    default:
+                        break;
                 }
             }
             else
@@ -346,6 +396,8 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
     {
         private Preference mpeg;
         private Preference hevc;
-        private PreferenceCategory category;
+        private Preference mic;
+        private PreferenceCategory categoryVideo;
+        private PreferenceCategory categoryAudio;
     }
 }

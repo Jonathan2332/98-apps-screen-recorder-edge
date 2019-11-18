@@ -20,6 +20,8 @@ public class Constants {
     public static final String SHOW_RECORDING_NOTIFICATION = "key_recording_notification";
     public static final String RECORD_PATH = "key_record_path";
     public static final String FILE_FORMAT = "key_file_format";
+    public static final String SHOW_BUTTON_MIC = "key_show_mic";
+    public static final String SHOW_BUTTON_VIDEOS = "key_show_videos";
 
     public static final String DEFAULT_PATH = Environment.getExternalStorageDirectory() + File.separator + "Screen Recorder Edge";
     public static final String DEFAULT_FILE_FORMAT = "yyyyddMM_HHmmss";

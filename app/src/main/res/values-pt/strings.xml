@@ -5,14 +5,12 @@
     <string name="description_edge_single_plus">Gravador de tela simples para o painel edge</string>
     <string name="description_image">Pré-visualização da imagem do vídeo</string>
     <string name="description_list_videos">Botão Listar Vídeos</string>
-    <string name="summary_donation">Caso você queira fazer uma doação para dar suporte ao meu aplicativo :)</string>
     <string name="summary_info_fps">Os vídeos serão gravados a 60 FPS por padrão. Quanto maior a resolução e a qualidade do vídeo, maior será o tamanho do arquivo. Usando o codificador HEVC você irá economizar mais espaço.</string>
     <string name="summary_rate_app">Avalie o aplicativo na Galaxy Store!</string>
     <string name="summary_record_mic">Grava o áudio externo usando o microfone</string>
     <string name="summary_recording_notification">Gerencie as notificações enquanto grava ou ao terminar</string>
     <string name="title_audio_channel">Canal do Áudio</string>
     <string name="title_audio_quality">Qualidade do Áudio</string>
-    <string name="title_donate">Doar</string>
     <string name="title_finish_action">Ação ao Terminar</string>
     <string name="title_rate_app">Avalie-nos</string>
     <string name="title_record_mic">Gravar Microfone</string>
@@ -166,4 +164,11 @@
     <string name="summary_info_encoder_hevc"><b>HEVC</b> é o codificador mais eficiente e recomendado caso você queira economizar mais espaço, porém é possível que você não consiga reproduzir vídeos HEVC em outros dispositivos ou compartilhá-los online.</string>
     <string name="summary_info_encoder_mpeg4"><b>MPEG4</b> é o codificador mais limitado em resolução, suporta de 360p até 900p de resolução em tela cheia e 960p em 2:1 e 1080p em 16:9 (não em tela cheia). É possível que seu dispositivo não consiga usar este codificador.</string>
     <string name="failed_get_log">Falha ao obter o log</string>
+    <string name="description_button_mic">Botão de habilitar/desabitar gravação do microfone</string>
+    <string name="summary_show_mic">Mostra o botão de habilitar/desabilitar gravação de microfone</string>
+    <string name="summary_show_videos">Exibe o botão da lista de vídeos gravados</string>
+    <string name="text_panel">Painel</string>
+    <string name="title_show_mic">Botão Microfone</string>
+    <string name="title_show_videos">Botão Vídeos</string>
+    <string name="warning_mic_while_recording">Você não pode usar isso durante a gravação</string>
 </resources>

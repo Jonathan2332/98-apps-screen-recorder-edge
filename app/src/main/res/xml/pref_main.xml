@@ -83,7 +83,7 @@
 
     </PreferenceCategory>
 
-    <PreferenceCategory android:title="@string/category_audio">
+    <PreferenceCategory android:title="@string/category_audio" android:key="@string/key_category_audio">
 
         <SwitchPreference
             android:defaultValue="true"
@@ -93,7 +93,6 @@
 
         <ListPreference
             android:defaultValue="3"
-            android:dependency="@string/key_record_mic"
             android:dialogTitle="@string/title_audio_encoder"
             android:entries="@array/pref_audio_encoder_entries"
             android:entryValues="@array/pref_audio_encoder_values"
@@ -102,7 +101,6 @@
 
         <ListPreference
             android:defaultValue="1"
-            android:dependency="@string/key_record_mic"
             android:dialogTitle="@string/title_audio_source"
             android:entries="@array/pref_audio_source_entries"
             android:entryValues="@array/pref_audio_source_values"
@@ -111,7 +109,6 @@
 
         <ListPreference
             android:defaultValue="1"
-            android:dependency="@string/key_record_mic"
             android:dialogTitle="@string/title_audio_quality"
             android:entries="@array/pref_audio_quality_entries"
             android:entryValues="@array/pref_audio_quality_values"
@@ -120,7 +117,6 @@
 
         <ListPreference
             android:defaultValue="1"
-            android:dependency="@string/key_record_mic"
             android:dialogTitle="@string/title_audio_channel"
             android:entries="@array/pref_audio_channel_entries"
             android:entryValues="@array/pref_audio_channel_values"
@@ -149,6 +145,22 @@
 
     </PreferenceCategory>
 
+    <PreferenceCategory android:title="@string/text_panel">
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="@string/key_show_mic"
+            android:summary="@string/summary_show_mic"
+            android:title="@string/title_show_mic" />
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="@string/key_show_videos"
+            android:summary="@string/summary_show_videos"
+            android:title="@string/title_show_videos" />
+
+    </PreferenceCategory>
+
     <PreferenceCategory android:title="@string/category_other">
 
         <SwitchPreference
@@ -166,16 +178,6 @@
             android:key="@string/key_report_bug"
             android:summary="@string/summary_report_bug"
             android:title="@string/title_report_bug" />
-
-        <Preference
-            android:key="@string/key_donate"
-            android:summary="@string/summary_donation"
-            android:title="@string/title_donate">
-            <intent
-                android:action="android.intent.action.VIEW"
-                android:data="@string/url_donate" />
-        </Preference>
-
 
         <Preference
             android:summary="@string/summary_rate_app"

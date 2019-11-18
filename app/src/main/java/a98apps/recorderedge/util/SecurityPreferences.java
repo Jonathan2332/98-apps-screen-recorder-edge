@@ -20,8 +20,10 @@ public class SecurityPreferences
         switch (key)
         {
             case Constants.INITIALIZED:
+            case Constants.SHOW_BUTTON_MIC:
                 return String.valueOf(this.mSharedPreferences.getBoolean(key, false));
             case Constants.RECORD_MIC:
+            case Constants.SHOW_BUTTON_VIDEOS:
             case Constants.SHOW_RECORDING_NOTIFICATION:
             case Constants.INTERNAL_STORAGE:
                 return String.valueOf(this.mSharedPreferences.getBoolean(key, true));
@@ -54,6 +56,8 @@ public class SecurityPreferences
     public void saveSetting(String key, String value)
     {
         if(key.equals(Constants.INTERNAL_STORAGE))
+            this.mSharedPreferences.edit().putBoolean(key, Boolean.parseBoolean(value)).apply();
+        else if(key.equals(Constants.RECORD_MIC))
             this.mSharedPreferences.edit().putBoolean(key, Boolean.parseBoolean(value)).apply();
         else
             this.mSharedPreferences.edit().putString(key, value).apply();
@@ -96,6 +100,18 @@ public class SecurityPreferences
             if(!mSharedPreferences.contains(Constants.SHOW_RECORDING_NOTIFICATION)) {
                 ed = mSharedPreferences.edit();
                 ed.putBoolean(Constants.SHOW_RECORDING_NOTIFICATION, true);
+                ed.apply();
+            }
+
+            if(!mSharedPreferences.contains(Constants.SHOW_BUTTON_MIC)) {
+                ed = mSharedPreferences.edit();
+                ed.putBoolean(Constants.SHOW_BUTTON_MIC, false);
+                ed.apply();
+            }
+
+            if(!mSharedPreferences.contains(Constants.SHOW_BUTTON_VIDEOS)) {
+                ed = mSharedPreferences.edit();
+                ed.putBoolean(Constants.SHOW_BUTTON_VIDEOS, true);
                 ed.apply();
             }
 

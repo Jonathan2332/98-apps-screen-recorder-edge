@@ -4,12 +4,9 @@
     <string name="description_button_rec">Button Start/Stop Recording</string>
     <string name="key_record_mic" translatable="false">key_record_mic</string>
     <string name="summary_record_mic">Record external audio using the microphone</string>
-    <string name="url_rate" translatable="false">http://apps.samsung.com/appquery/appDetail.as?appId=a98apps.recorderedge</string>
+    <string name="url_rate" translatable="false">https://play.google.com/store/apps/details?id=a98apps.recorderedge</string>
     <string name="title_video_quality">Video Quality</string>
     <string name="key_video_quality" translatable="false">key_video_quality</string>
-    <string name="summary_donation">If you want to make a donation to support my app :)</string>
-    <string name="key_donate" translatable="false">key_donate</string>
-    <string name="title_donate">Donate</string>
     <string name="key_recording_notification" translatable="false">key_recording_notification</string>
     <string name="summary_recording_notification">Manage notifications while recording or when finished</string>
     <string name="title_recording_notification">Show Notifications</string>
@@ -27,7 +24,7 @@
     <string name="title_audio_channel">Audio Channel</string>
     <string name="description_list_videos">Button List Videos</string>
     <string name="description_button_settings">Button Open Settings</string>
-    <string name="summary_rate_app">Rate the app in Galaxy Store!</string>
+    <string name="summary_rate_app">Rate the app in Play Store!</string>
     <string name="title_rate_app">Rate us</string>
     <string name="title_record_mic">Record Microphone</string>
     <string name="summary_info_fps">The videos will be recorded in 60 FPS by default. The higher the resolution and the quality of the video, the larger the file size. Using HEVC encoder will save you more space.</string>
@@ -66,7 +63,6 @@
     <string name="finish_notification">Finish Notification</string>
     <string name="description_notification_finish">Displays a notification on record finish</string>
     <string name="description_notification_recording">Displays a notification while recording</string>
-    <string name="url_donate" translatable="false"><![CDATA[https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=XNNQNLN87TGXL&source=url]]></string>
     <string name="title_settings_activity">"  Settings"</string>
     <string name="category_notifications">Notifications</string>
     <string name="category_other">Other</string>
@@ -122,6 +118,16 @@
     <string name="summary_info_encoder_mpeg4"><b>MPEG4</b> is the most limited encoder in resolution, supports 360p up to 900p resolution in full screen and 960p in 2:1 and 1080p in 16:9 (not full screen). Your device may not be able to use this encoder.</string>
     <string name="summary_info_encoder_hevc"><b>HEVC</b> is the more efficient encoder and recommended if you want to save more space, but you may not be able to play HEVC videos on other devices or share them online.</string>
     <string name="failed_get_log">Failed to get log</string>
+    <string name="description_button_mic">Button enable/disable recording mic</string>
+    <string name="text_panel">Panel</string>
+    <string name="key_show_mic" translatable="false">key_show_mic</string>
+    <string name="key_show_videos" translatable="false">key_show_videos</string>
+    <string name="summary_show_mic">Shows microphone recording enable/disable button</string>
+    <string name="summary_show_videos">Displays the button of the recorded video list</string>
+    <string name="title_show_videos">Button Videos</string>
+    <string name="title_show_mic">Button Microphone</string>
+    <string name="key_category_audio" translatable="false">key_category_audio</string>
+    <string name="warning_mic_while_recording">You cannot use this while recording</string>
 
     <string-array name="pref_finish_action_entries">
         <item>Nothing</item>
