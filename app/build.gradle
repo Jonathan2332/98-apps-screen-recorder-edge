@@ -6,7 +6,7 @@ android {
         applicationId "a98apps.recorderedge"
         minSdkVersion 24
         targetSdkVersion 28
-        versionCode 32
+        versionCode 33
         versionName "1.3.3"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
