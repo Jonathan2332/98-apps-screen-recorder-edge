@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory
+        android:title="@string/category_notifications"
+        app:iconSpaceReserved="false">
+
+        <Preference
+            android:key="@string/key_recording_notification"
+            android:summary="@string/summary_recording_notification"
+            android:title="@string/title_recording_notification"
+            android:icon="@drawable/ic_notifications_active"/>
+
+        <ListPreference
+            android:defaultValue="2"
+            android:dialogTitle="@string/title_finish_action"
+            android:entries="@array/pref_finish_action_entries"
+            android:entryValues="@array/pref_finish_action_values"
+            android:key="@string/key_finish_action"
+            android:title="@string/title_finish_action"
+            android:icon="@drawable/ic_stop"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="@string/key_category_video"
+        android:title="@string/category_video"
+        app:iconSpaceReserved="false">
+
+        <ListPreference
+            android:defaultValue="5"
+            android:dialogTitle="@string/title_video_encoder"
+            android:entries="@array/pref_video_encoder_entries"
+            android:entryValues="@array/pref_video_encoder_values"
+            android:key="@string/key_video_encoder"
+            android:title="@string/title_video_encoder"
+            android:icon="@drawable/ic_local_movies"/>
+
+        <ListPreference
+            android:defaultValue="0"
+            android:dialogTitle="@string/title_video_quality"
+            android:entries="@array/pref_video_quality_entries"
+            android:entryValues="@array/pref_video_quality_values"
+            android:key="@string/key_video_quality"
+            android:title="@string/title_video_quality"
+            android:icon="@drawable/ic_hd"/>
+
+        <ListPreference
+            android:defaultValue="0"
+            android:dialogTitle="@string/title_video_resolution"
+            android:entries="@array/pref_hevc_resolution_entries"
+            android:entryValues="@array/pref_hevc_resolution_values"
+            android:key="@string/key_hevc_resolution"
+            android:title="@string/title_video_resolution"
+            android:icon="@drawable/ic_resolution_icon"/>
+
+        <ListPreference
+            android:defaultValue="720"
+            android:dialogTitle="@string/title_video_resolution"
+            android:entries="@array/pref_mpeg4_resolution_entries"
+            android:entryValues="@array/pref_mpeg4_resolution_values"
+            android:key="@string/key_mpeg_resolution"
+            android:title="@string/title_video_resolution"
+            android:icon="@drawable/ic_resolution_icon"/>
+
+        <ListPreference
+            android:defaultValue="0"
+            android:dialogTitle="@string/title_video_orientation"
+            android:entries="@array/pref_video_orientation_entries"
+            android:entryValues="@array/pref_video_orientation_values"
+            android:key="@string/key_video_orientation"
+            android:title="@string/title_video_orientation"
+            android:icon="@drawable/ic_orientation"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/category_audio"
+        app:iconSpaceReserved="false">
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="@string/key_record_mic"
+            android:summary="@string/summary_record_mic"
+            android:title="@string/title_record_mic"
+            android:icon="@drawable/ic_mic_on"
+            app:isPreferenceVisible="false"/>
+
+        <ListPreference
+            android:defaultValue="3"
+            android:dialogTitle="@string/title_audio_encoder"
+            android:entries="@array/pref_audio_encoder_entries"
+            android:entryValues="@array/pref_audio_encoder_values"
+            android:key="@string/key_audio_encoder"
+            android:title="@string/title_audio_encoder"
+            android:icon="@drawable/ic_graphic"/>
+
+        <ListPreference
+            android:defaultValue="1"
+            android:dialogTitle="@string/title_audio_source"
+            android:entries="@array/pref_audio_source_entries"
+            android:entryValues="@array/pref_audio_source_values"
+            android:key="@string/key_audio_source"
+            android:title="@string/title_audio_source"
+            android:icon="@drawable/ic_settings_voice"/>
+
+        <ListPreference
+            android:defaultValue="1"
+            android:dialogTitle="@string/title_audio_quality"
+            android:entries="@array/pref_audio_quality_entries"
+            android:entryValues="@array/pref_audio_quality_values"
+            android:key="@string/key_audio_quality"
+            android:title="@string/title_audio_quality"
+            android:icon="@drawable/ic_high_quality"/>
+
+        <ListPreference
+            android:defaultValue="1"
+            android:dialogTitle="@string/title_audio_channel"
+            android:entries="@array/pref_audio_channel_entries"
+            android:entryValues="@array/pref_audio_channel_values"
+            android:key="@string/key_audio_channel"
+            android:title="@string/title_audio_channel"
+            android:icon="@drawable/ic_surround_sound"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/text_storage"
+        app:iconSpaceReserved="false">
+
+        <Preference
+            android:key="@string/key_record_path"
+            android:title="@string/title_record_path"
+            android:icon="@drawable/ic_folder"/>
+
+        <ListPreference
+            android:defaultValue="yyyyddMM_HHmmss"
+            android:dialogTitle="@string/title_file_format"
+            android:entries="@array/pref_file_format_array_entries"
+            android:entryValues="@array/pref_file_format_array_values"
+            android:key="@string/key_file_format"
+            android:title="@string/title_file_format"
+            android:icon="@drawable/ic_file"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/text_panel"
+        app:iconSpaceReserved="false">
+
+        <ListPreference
+            android:defaultValue="0"
+            android:dialogTitle="@string/title_record_theme"
+            android:entries="@array/pref_button_rec_theme_entries"
+            android:entryValues="@array/pref_button_rec_theme_values"
+            android:key="@string/key_button_rec_theme"
+            android:summary="@string/summary_button_rec_color"
+            android:title="@string/title_record_theme"
+            android:icon="@drawable/ic_button_rec" />
+
+        <com.jaredrummler.android.colorpicker.ColorPreferenceCompat
+            android:defaultValue="0x59323338"
+            android:key="@string/key_panel_color"
+            android:summary="@string/summary_color_panel"
+            android:title="@string/title_panel_color"
+            android:icon="@drawable/ic_panel"
+            app:cpv_colorShape="square"
+            app:cpv_showAlphaSlider="false" />
+
+
+        <com.jaredrummler.android.colorpicker.ColorPreferenceCompat
+            android:defaultValue="0xFFFFFFFF"
+            android:key="@string/key_list_icon_color"
+            android:summary="@string/summary_color_list"
+            android:title="@string/title_list_color"
+            android:icon="@drawable/ic_list_icon"
+            app:cpv_colorShape="square"
+            app:cpv_showAlphaSlider="false" />
+
+        <com.jaredrummler.android.colorpicker.ColorPreferenceCompat
+            android:defaultValue="0xFFFFFFFF"
+            android:key="@string/key_settings_icon_color"
+            android:summary="@string/summary_color_settings"
+            android:title="@string/title_settings_color"
+            android:icon="@drawable/ic_settings_24dp"
+            app:cpv_colorShape="square"
+            app:cpv_showAlphaSlider="false" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/category_app"
+        app:iconSpaceReserved="false">
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="@string/key_hide_icon"
+            android:summary="@string/summary_hide_icon"
+            android:title="@string/title_hide_icon"
+            android:icon="@drawable/ic_android"/>
+
+        <Preference
+            android:key="@string/key_reset_config"
+            android:summary="@string/summary_reset_settings"
+            android:title="@string/title_reset_settings"
+            android:icon="@drawable/ic_refresh"/>
+
+        <Preference
+            android:key="@string/key_report_bug"
+            android:summary="@string/summary_report_bug"
+            android:title="@string/title_report_bug"
+            android:icon="@drawable/ic_bug_report" />
+
+        <ListPreference
+            android:defaultValue="0"
+            android:dialogTitle="@string/title_app_theme"
+            android:entries="@array/pref_app_theme_entries"
+            android:entryValues="@array/pref_app_theme_values"
+            android:key="@string/key_app_theme"
+            android:title="@string/title_app_theme"
+            android:summary="@string/summary_theme_app"
+            android:icon="@drawable/ic_theme" />
+
+        <Preference
+            android:key="@string/key_version"
+            android:selectable="false"
+            android:summary="@string/text_version" />
+
+    </PreferenceCategory>
+</PreferenceScreen>

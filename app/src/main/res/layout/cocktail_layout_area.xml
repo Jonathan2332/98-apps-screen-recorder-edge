@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorWhite"
+        android:contentDescription="@string/description_divider" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/button_help"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#00ffffff"
+            android:drawableStart="@drawable/ic_help"
+            android:text="@string/text_help_area_cocktail"
+            android:textAlignment="textStart"
+            android:textStyle="bold"
+            android:textColor="@color/colorWhite" />
+
+        <Button
+            android:id="@+id/button_donate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#00ffffff"
+            android:drawableStart="@drawable/ic_favorite"
+            android:text="@string/text_donate"
+            android:textAlignment="textStart"
+            android:textStyle="bold"
+            android:textColor="@color/colorWhite" />
+
+        <Button
+            android:id="@+id/button_rate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#00ffffff"
+            android:drawableStart="@drawable/ic_star"
+            android:text="@string/title_rate_app"
+            android:textAlignment="textStart"
+            android:textStyle="bold"
+            android:textColor="@color/colorWhite" />
+
+<!--        <Button-->
+<!--            android:id="@+id/button_list"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:background="#00ffffff"-->
+<!--            android:drawableStart="@drawable/ic_list_24dp"-->
+<!--            android:drawableTint="@color/colorWhite"-->
+<!--            android:text="@string/title_videos_pádding"-->
+<!--            android:textAlignment="textStart"-->
+<!--            android:textStyle="bold"-->
+<!--            android:textColor="@color/colorWhite" />-->
+
+<!--        <ImageView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="1dp"-->
+<!--            android:background="@color/colorLightDark"-->
+<!--            android:contentDescription="@string/description_divider" />-->
+
+        <Button
+            android:id="@+id/button_mic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#00ffffff"
+            android:drawableStart="@drawable/ic_mic_on"
+            android:drawableTint="@color/colorWhite"
+            android:text="@string/title_mic_on"
+            android:textAlignment="textStart"
+            android:textStyle="bold"
+            android:textColor="@color/colorWhite" />
+
+    </LinearLayout>
+
+</FrameLayout>

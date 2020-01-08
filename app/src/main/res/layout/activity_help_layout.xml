@@ -1,0 +1,1095 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.HelpActivity">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- VIDEO -->
+
+        <com.github.florent37.expansionpanel.ExpansionHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/layout_10dp"
+            app:expansion_headerIndicator="@id/headerIndicatorVideo"
+            app:expansion_layout="@id/expansionLayoutVideo"
+            app:expansion_toggleOnClick="true">
+
+            <!-- HEADER -->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_notification"
+                android:drawableTint="@color/colorAccent"
+                android:text="@string/title_video"
+                android:textColor="@color/colorAccent"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <!-- HEADER INDICATOR -->
+            <ImageView
+                android:id="@+id/headerIndicatorVideo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|end"
+                android:layout_marginStart="@dimen/layout_16dp"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/ic_expansion_header_indicator_grey_24dp"
+                android:contentDescription="@string/description_button_expand" />
+
+        </com.github.florent37.expansionpanel.ExpansionHeader>
+
+        <com.github.florent37.expansionpanel.ExpansionLayout
+            android:id="@+id/expansionLayoutVideo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.github.florent37.expansionpanel.ExpansionHeader
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/layout_15dp"
+                    app:expansion_headerIndicator="@id/headerIndicatorEncoders"
+                    app:expansion_layout="@id/expansionLayoutEncoders"
+                    app:expansion_toggleOnClick="true">
+
+                    <!-- HEADER -->
+                    <!--ENCODER-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/ic_local_movies"
+                        android:drawableTint="?android:attr/textColorPrimary"
+                        android:text="@string/title_encoders"
+                        android:textColor="?android:attr/textColorPrimary"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <!-- HEADER INDICATOR -->
+                    <ImageView
+                        android:id="@+id/headerIndicatorEncoders"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|end"
+                        android:layout_marginStart="@dimen/layout_16dp"
+                        android:adjustViewBounds="true"
+                        app:srcCompat="@drawable/ic_expansion_header_indicator_grey_24dp"
+                        android:contentDescription="@string/description_button_expand" />
+
+
+                </com.github.florent37.expansionpanel.ExpansionHeader>
+
+                <com.github.florent37.expansionpanel.ExpansionLayout
+                    android:id="@+id/expansionLayoutEncoders"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <!-- CONTENT -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="25dp"
+                            android:paddingEnd="25dp"
+                            android:text="@string/summary_info_encoder_h264"
+                            android:textColor="?android:attr/textColorSecondary" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="@dimen/layout_25dp"
+                            android:paddingEnd="@dimen/layout_25dp"
+                            android:text="@string/summary_info_encoder_mpeg4"
+                            android:textColor="?android:attr/textColorSecondary" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="@dimen/layout_25dp"
+                            android:paddingEnd="@dimen/layout_25dp"
+                            android:text="@string/summary_info_encoder_hevc"
+                            android:textColor="?android:attr/textColorSecondary" />
+
+                    </LinearLayout>
+
+                </com.github.florent37.expansionpanel.ExpansionLayout>
+
+                <com.github.florent37.expansionpanel.ExpansionHeader
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/layout_15dp"
+                    app:expansion_headerIndicator="@id/headerIndicatorQuality"
+                    app:expansion_layout="@id/expansionLayoutQuality"
+                    app:expansion_toggleOnClick="true">
+
+                    <!-- HEADER -->
+                    <!--QUALITY-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/ic_hd"
+                        android:drawableTint="?android:attr/textColorPrimary"
+                        android:text="@string/title_quality"
+                        android:textColor="?android:attr/textColorPrimary"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <!-- HEADER INDICATOR -->
+                    <ImageView
+                        android:id="@+id/headerIndicatorQuality"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|end"
+                        android:layout_marginStart="@dimen/layout_16dp"
+                        android:adjustViewBounds="true"
+                        app:srcCompat="@drawable/ic_expansion_header_indicator_grey_24dp"
+                        android:contentDescription="@string/description_button_expand" />
+
+
+                </com.github.florent37.expansionpanel.ExpansionHeader>
+
+                <com.github.florent37.expansionpanel.ExpansionLayout
+                    android:id="@+id/expansionLayoutQuality"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <!-- CONTENT -->
+                        <TextView
+                            android:id="@+id/info_quality"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="@dimen/layout_25dp"
+                            android:paddingEnd="@dimen/layout_25dp"
+                            android:text="@string/text_info_quality"
+                            android:textColor="?android:attr/textColorSecondary" />
+
+                    </LinearLayout>
+
+                </com.github.florent37.expansionpanel.ExpansionLayout>
+
+                <com.github.florent37.expansionpanel.ExpansionHeader
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/layout_15dp"
+                    app:expansion_headerIndicator="@id/headerIndicatorFrame"
+                    app:expansion_layout="@id/expansionLayoutFrame"
+                    app:expansion_toggleOnClick="true">
+
+                    <!-- HEADER -->
+                    <!--FRAME RATE-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/info_quality"
+                        android:drawableStart="@drawable/ic_fps"
+                        android:drawableTint="?android:attr/textColorPrimary"
+                        android:text="@string/title_frame_rate"
+                        android:textColor="?android:attr/textColorPrimary"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <!-- HEADER INDICATOR -->
+                    <ImageView
+                        android:id="@+id/headerIndicatorFrame"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|end"
+                        android:layout_marginStart="@dimen/layout_16dp"
+                        android:adjustViewBounds="true"
+                        app:srcCompat="@drawable/ic_expansion_header_indicator_grey_24dp"
+                        android:contentDescription="@string/description_button_expand" />
+
+
+                </com.github.florent37.expansionpanel.ExpansionHeader>
+
+                <com.github.florent37.expansionpanel.ExpansionLayout
+                    android:id="@+id/expansionLayoutFrame"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <!-- CONTENT -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="@dimen/layout_25dp"
+                            android:paddingEnd="@dimen/layout_25dp"
+                            android:text="@string/text_info_fps"
+                            android:textColor="?android:attr/textColorSecondary" />
+
+                    </LinearLayout>
+
+                </com.github.florent37.expansionpanel.ExpansionLayout>
+
+            </LinearLayout>
+
+        </com.github.florent37.expansionpanel.ExpansionLayout>
+
+        <!-- AUDIO -->
+
+        <com.github.florent37.expansionpanel.ExpansionHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/layout_10dp"
+            app:expansion_headerIndicator="@id/headerIndicatorAudio"
+            app:expansion_layout="@id/expansionLayoutAudio"
+            app:expansion_toggleOnClick="true">
+
+            <!-- HEADER -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_volume_up"
+                android:drawableTint="@color/colorAccent"
+                android:text="@string/title_audio_padding"
+                android:textColor="@color/colorAccent"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <!-- HEADER INDICATOR -->
+            <ImageView
+                android:id="@+id/headerIndicatorAudio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|end"
+                android:layout_marginStart="@dimen/layout_16dp"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/ic_expansion_header_indicator_grey_24dp"
+                android:contentDescription="@string/description_button_expand" />
+
+        </com.github.florent37.expansionpanel.ExpansionHeader>
+
+        <com.github.florent37.expansionpanel.ExpansionLayout
+            android:id="@+id/expansionLayoutAudio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.github.florent37.expansionpanel.ExpansionHeader
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/layout_15dp"
+                    app:expansion_headerIndicator="@id/headerIndicatorInternal"
+                    app:expansion_layout="@id/expansionLayoutInternal"
+                    app:expansion_toggleOnClick="true">
+
+                    <!-- HEADER -->
+                    <!-- INTERNAL AUDIO -->
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/ic_audiotrack"
+                        android:drawableTint="?android:attr/textColorPrimary"
+                        android:text="@string/title_internal_audio"
+                        android:textColor="?android:attr/textColorPrimary"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <!-- HEADER INDICATOR -->
+                    <ImageView
+                        android:id="@+id/headerIndicatorInternal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|end"
+                        android:layout_marginStart="@dimen/layout_16dp"
+                        android:adjustViewBounds="true"
+                        app:srcCompat="@drawable/ic_expansion_header_indicator_grey_24dp"
+                        android:contentDescription="@string/description_button_expand" />
+
+
+                </com.github.florent37.expansionpanel.ExpansionHeader>
+
+                <com.github.florent37.expansionpanel.ExpansionLayout
+                    android:id="@+id/expansionLayoutInternal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <!-- CONTENT -->
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="@dimen/layout_25dp"
+                            android:paddingEnd="@dimen/layout_25dp"
+                            android:text="@string/text_internal_audio_info"
+                            android:textColor="?android:attr/textColorSecondary" />
+
+                    </LinearLayout>
+
+                </com.github.florent37.expansionpanel.ExpansionLayout>
+
+                <com.github.florent37.expansionpanel.ExpansionHeader
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/layout_15dp"
+                    app:expansion_headerIndicator="@id/headerIndicatorMic"
+                    app:expansion_layout="@id/expansionLayoutMic"
+                    app:expansion_toggleOnClick="true">
+
+                    <!-- HEADER -->
+                    <!-- MICROPHONE -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/ic_mic_on"
+                        android:drawableTint="?android:attr/textColorPrimary"
+                        android:text="@string/title_microphone"
+                        android:textColor="?android:attr/textColorPrimary"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <!-- HEADER INDICATOR -->
+                    <ImageView
+                        android:id="@+id/headerIndicatorMic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|end"
+                        android:layout_marginStart="@dimen/layout_16dp"
+                        android:adjustViewBounds="true"
+                        app:srcCompat="@drawable/ic_expansion_header_indicator_grey_24dp"
+                        android:contentDescription="@string/description_button_expand" />
+
+
+                </com.github.florent37.expansionpanel.ExpansionHeader>
+
+                <com.github.florent37.expansionpanel.ExpansionLayout
+                    android:id="@+id/expansionLayoutMic"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <!-- CONTENT -->
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="@dimen/layout_25dp"
+                            android:paddingEnd="@dimen/layout_25dp"
+                            android:text="@string/text_info_microphone"
+                            android:textColor="?android:attr/textColorSecondary" />
+
+                    </LinearLayout>
+
+                </com.github.florent37.expansionpanel.ExpansionLayout>
+
+            </LinearLayout>
+
+        </com.github.florent37.expansionpanel.ExpansionLayout>
+
+        <!-- STORAGE -->
+
+        <com.github.florent37.expansionpanel.ExpansionHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/layout_10dp"
+            app:expansion_headerIndicator="@id/headerIndicatorStorage"
+            app:expansion_layout="@id/expansionLayoutStorage"
+            app:expansion_toggleOnClick="true">
+
+            <!-- HEADER -->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_folder"
+                android:drawableTint="@color/colorAccent"
+                android:text="@string/title_storage_padding"
+                android:textColor="@color/colorAccent"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <!-- HEADER INDICATOR -->
+            <ImageView
+                android:id="@+id/headerIndicatorStorage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|end"
+                android:layout_marginStart="@dimen/layout_16dp"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/ic_expansion_header_indicator_grey_24dp"
+                android:contentDescription="@string/description_button_expand" />
+
+        </com.github.florent37.expansionpanel.ExpansionHeader>
+
+        <com.github.florent37.expansionpanel.ExpansionLayout
+            android:id="@+id/expansionLayoutStorage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.github.florent37.expansionpanel.ExpansionHeader
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/layout_15dp"
+                    app:expansion_headerIndicator="@id/headerIndicatorFile"
+                    app:expansion_layout="@id/expansionLayoutFile"
+                    app:expansion_toggleOnClick="true">
+
+                    <!-- HEADER -->
+                    <!--FILE LIMIT-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/ic_file"
+                        android:drawableTint="?android:attr/textColorPrimary"
+                        android:text="@string/title_file_limit"
+                        android:textColor="?android:attr/textColorPrimary"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <!-- HEADER INDICATOR -->
+                    <ImageView
+                        android:id="@+id/headerIndicatorFile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|end"
+                        android:layout_marginStart="@dimen/layout_16dp"
+                        android:adjustViewBounds="true"
+                        app:srcCompat="@drawable/ic_expansion_header_indicator_grey_24dp"
+                        android:contentDescription="@string/description_button_expand" />
+
+
+                </com.github.florent37.expansionpanel.ExpansionHeader>
+
+                <com.github.florent37.expansionpanel.ExpansionLayout
+                    android:id="@+id/expansionLayoutFile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <!-- CONTENT -->
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="@dimen/layout_25dp"
+                            android:paddingEnd="@dimen/layout_25dp"
+                            android:text="@string/text_info_file_limit"
+                            android:textColor="?android:attr/textColorSecondary" />
+
+                    </LinearLayout>
+
+                </com.github.florent37.expansionpanel.ExpansionLayout>
+
+                <com.github.florent37.expansionpanel.ExpansionHeader
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/layout_15dp"
+                    app:expansion_headerIndicator="@id/headerIndicatorSaving"
+                    app:expansion_layout="@id/expansionLayoutSaving"
+                    app:expansion_toggleOnClick="true">
+
+                    <!-- HEADER -->
+                    <!--SAVING SPACE-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/ic_data_usage"
+                        android:drawableTint="?android:attr/textColorPrimary"
+                        android:text="@string/title_saving_space"
+                        android:textColor="?android:attr/textColorPrimary"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <!-- HEADER INDICATOR -->
+                    <ImageView
+                        android:id="@+id/headerIndicatorSaving"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|end"
+                        android:layout_marginStart="@dimen/layout_16dp"
+                        android:adjustViewBounds="true"
+                        app:srcCompat="@drawable/ic_expansion_header_indicator_grey_24dp"
+                        android:contentDescription="@string/description_button_expand" />
+
+
+                </com.github.florent37.expansionpanel.ExpansionHeader>
+
+                <com.github.florent37.expansionpanel.ExpansionLayout
+                    android:id="@+id/expansionLayoutSaving"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <!-- CONTENT -->
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="@dimen/layout_25dp"
+                            android:paddingEnd="@dimen/layout_25dp"
+                            android:text="@string/text_saving_space_info"
+                            android:textColor="?android:attr/textColorSecondary" />
+
+
+                    </LinearLayout>
+
+                </com.github.florent37.expansionpanel.ExpansionLayout>
+
+            </LinearLayout>
+
+        </com.github.florent37.expansionpanel.ExpansionLayout>
+
+        <!-- ERRORS -->
+
+        <com.github.florent37.expansionpanel.ExpansionHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/layout_10dp"
+            app:expansion_headerIndicator="@id/headerIndicatorErrors"
+            app:expansion_layout="@id/expansionLayoutErrors"
+            app:expansion_toggleOnClick="true">
+
+            <!-- HEADER -->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_warning"
+                android:drawableTint="@color/colorAccent"
+                android:text="@string/title_erros_padding"
+                android:textColor="@color/colorAccent"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <!-- HEADER INDICATOR -->
+            <ImageView
+                android:id="@+id/headerIndicatorErrors"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|end"
+                android:layout_marginStart="@dimen/layout_16dp"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/ic_expansion_header_indicator_grey_24dp"
+                android:contentDescription="@string/description_button_expand" />
+
+        </com.github.florent37.expansionpanel.ExpansionHeader>
+
+        <com.github.florent37.expansionpanel.ExpansionLayout
+            android:id="@+id/expansionLayoutErrors"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.github.florent37.expansionpanel.ExpansionHeader
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/layout_15dp"
+                    app:expansion_headerIndicator="@id/headerIndicatorIllegal"
+                    app:expansion_layout="@id/expansionLayoutIllegal"
+                    app:expansion_toggleOnClick="true">
+
+                    <!-- HEADER -->
+                    <!--Illegal State Excpetion-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/ic_error_outline"
+                        android:drawableTint="?android:attr/textColorPrimary"
+                        android:text="@string/title_illegal_state_exception"
+                        android:textColor="?android:attr/textColorPrimary"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <!-- HEADER INDICATOR -->
+                    <ImageView
+                        android:id="@+id/headerIndicatorIllegal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|end"
+                        android:layout_marginStart="@dimen/layout_16dp"
+                        android:adjustViewBounds="true"
+                        app:srcCompat="@drawable/ic_expansion_header_indicator_grey_24dp"
+                        android:contentDescription="@string/description_button_expand" />
+
+
+                </com.github.florent37.expansionpanel.ExpansionHeader>
+
+                <com.github.florent37.expansionpanel.ExpansionLayout
+                    android:id="@+id/expansionLayoutIllegal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <!-- CONTENT -->
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="@dimen/layout_25dp"
+                            android:paddingEnd="@dimen/layout_25dp"
+                            android:text="@string/text_info_illegal_state_exception"
+                            android:textColor="?android:attr/textColorSecondary" />
+
+                    </LinearLayout>
+
+                </com.github.florent37.expansionpanel.ExpansionLayout>
+
+                <com.github.florent37.expansionpanel.ExpansionHeader
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/layout_15dp"
+                    app:expansion_headerIndicator="@id/headerIndicatorRuntime"
+                    app:expansion_layout="@id/expansionLayoutRuntime"
+                    app:expansion_toggleOnClick="true">
+
+                    <!-- HEADER -->
+                    <!--RUNTIME EXCEPTIONE-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/ic_error_outline"
+                        android:drawableTint="?android:attr/textColorPrimary"
+                        android:text="@string/title_runtime_exception"
+                        android:textColor="?android:attr/textColorPrimary"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <!-- HEADER INDICATOR -->
+                    <ImageView
+                        android:id="@+id/headerIndicatorRuntime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|end"
+                        android:layout_marginStart="@dimen/layout_16dp"
+                        android:adjustViewBounds="true"
+                        app:srcCompat="@drawable/ic_expansion_header_indicator_grey_24dp"
+                        android:contentDescription="@string/description_button_expand" />
+
+
+                </com.github.florent37.expansionpanel.ExpansionHeader>
+
+                <com.github.florent37.expansionpanel.ExpansionLayout
+                    android:id="@+id/expansionLayoutRuntime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <!-- CONTENT -->
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="@dimen/layout_25dp"
+                            android:paddingEnd="@dimen/layout_25dp"
+                            android:text="@string/text_runtime_exception_info"
+                            android:textColor="?android:attr/textColorSecondary" />
+
+
+                    </LinearLayout>
+
+                </com.github.florent37.expansionpanel.ExpansionLayout>
+
+                <com.github.florent37.expansionpanel.ExpansionHeader
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/layout_15dp"
+                    app:expansion_headerIndicator="@id/headerIndicatorIo"
+                    app:expansion_layout="@id/expansionLayoutIo"
+                    app:expansion_toggleOnClick="true">
+
+                    <!-- HEADER -->
+                    <!--IO EXCEPTION-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/ic_error_outline"
+                        android:drawableTint="?android:attr/textColorPrimary"
+                        android:text="@string/title_io_exception"
+                        android:textColor="?android:attr/textColorPrimary"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        tools:ignore="TooManyViews" />
+
+                    <!-- HEADER INDICATOR -->
+                    <ImageView
+                        android:id="@+id/headerIndicatorIo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|end"
+                        android:layout_marginStart="@dimen/layout_16dp"
+                        android:adjustViewBounds="true"
+                        app:srcCompat="@drawable/ic_expansion_header_indicator_grey_24dp"
+                        android:contentDescription="@string/description_button_expand"/>
+
+
+                </com.github.florent37.expansionpanel.ExpansionHeader>
+
+                <com.github.florent37.expansionpanel.ExpansionLayout
+                    android:id="@+id/expansionLayoutIo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <!-- CONTENT -->
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="@dimen/layout_25dp"
+                            android:paddingEnd="@dimen/layout_25dp"
+                            android:text="@string/text_info_io_exception"
+                            android:textColor="?android:attr/textColorSecondary" />
+
+
+                    </LinearLayout>
+
+                </com.github.florent37.expansionpanel.ExpansionLayout>
+
+            </LinearLayout>
+
+        </com.github.florent37.expansionpanel.ExpansionLayout>
+
+        <!-- OTHERS -->
+
+        <com.github.florent37.expansionpanel.ExpansionHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/layout_10dp"
+            app:expansion_headerIndicator="@id/headerIndicatorOthers"
+            app:expansion_layout="@id/expansionLayoutOthers"
+            app:expansion_toggleOnClick="true">
+
+            <!-- HEADER -->
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_help_outline"
+                android:drawableTint="@color/colorAccent"
+                android:text="@string/title_others_padding"
+                android:textColor="@color/colorAccent"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <!-- HEADER INDICATOR -->
+            <ImageView
+                android:id="@+id/headerIndicatorOthers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|end"
+                android:layout_marginStart="@dimen/layout_16dp"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/ic_expansion_header_indicator_grey_24dp"
+                android:contentDescription="@string/description_button_expand"/>
+
+        </com.github.florent37.expansionpanel.ExpansionHeader>
+
+        <com.github.florent37.expansionpanel.ExpansionLayout
+            android:id="@+id/expansionLayoutOthers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.github.florent37.expansionpanel.ExpansionHeader
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/layout_15dp"
+                    app:expansion_headerIndicator="@id/headerIndicatorExynos"
+                    app:expansion_layout="@id/expansionLayoutExynos"
+                    app:expansion_toggleOnClick="true">
+
+                    <!-- HEADER -->
+                    <!--EXYNOS DEVICES-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/ic_cpu"
+                        android:drawableTint="?android:attr/textColorPrimary"
+                        android:text="@string/title_exynos_devices"
+                        android:textColor="?android:attr/textColorPrimary"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <!-- HEADER INDICATOR -->
+                    <ImageView
+                        android:id="@+id/headerIndicatorExynos"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|end"
+                        android:layout_marginStart="@dimen/layout_16dp"
+                        android:adjustViewBounds="true"
+                        app:srcCompat="@drawable/ic_expansion_header_indicator_grey_24dp"
+                        android:contentDescription="@string/description_button_expand"/>
+
+
+                </com.github.florent37.expansionpanel.ExpansionHeader>
+
+                <com.github.florent37.expansionpanel.ExpansionLayout
+                    android:id="@+id/expansionLayoutExynos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <!-- CONTENT -->
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="@dimen/layout_25dp"
+                            android:paddingEnd="@dimen/layout_25dp"
+                            android:text="@string/text_info_exynos_devices"
+                            android:textColor="?android:attr/textColorSecondary" />
+
+                    </LinearLayout>
+
+                </com.github.florent37.expansionpanel.ExpansionLayout>
+
+                <com.github.florent37.expansionpanel.ExpansionHeader
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/layout_15dp"
+                    app:expansion_headerIndicator="@id/headerIndicatorSnapdragon"
+                    app:expansion_layout="@id/expansionLayoutSnapdragon"
+                    app:expansion_toggleOnClick="true">
+
+                    <!-- HEADER -->
+                    <!--SNAPDRAGON DEVICES-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/ic_cpu_snapdragon"
+                        android:drawableTint="?android:attr/textColorPrimary"
+                        android:text="@string/title_snapdragon_devices"
+                        android:textColor="?android:attr/textColorPrimary"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <!-- HEADER INDICATOR -->
+                    <ImageView
+                        android:id="@+id/headerIndicatorSnapdragon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|end"
+                        android:layout_marginStart="@dimen/layout_16dp"
+                        android:adjustViewBounds="true"
+                        app:srcCompat="@drawable/ic_expansion_header_indicator_grey_24dp"
+                        android:contentDescription="@string/description_button_expand"/>
+
+
+                </com.github.florent37.expansionpanel.ExpansionHeader>
+
+                <com.github.florent37.expansionpanel.ExpansionLayout
+                    android:id="@+id/expansionLayoutSnapdragon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <!-- CONTENT -->
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="@dimen/layout_25dp"
+                            android:paddingEnd="@dimen/layout_25dp"
+                            android:text="@string/text_info_snapdragon_devices"
+                            android:textColor="?android:attr/textColorSecondary" />
+
+
+                    </LinearLayout>
+
+                </com.github.florent37.expansionpanel.ExpansionLayout>
+
+                <com.github.florent37.expansionpanel.ExpansionHeader
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/layout_15dp"
+                    app:expansion_headerIndicator="@id/headerIndicatorLog"
+                    app:expansion_layout="@id/expansionLayoutLog"
+                    app:expansion_toggleOnClick="true">
+
+                    <!-- HEADER -->
+                    <!--LOGS-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/ic_log"
+                        android:drawableTint="?android:attr/textColorPrimary"
+                        android:text="@string/logs"
+                        android:textColor="?android:attr/textColorPrimary"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <!-- HEADER INDICATOR -->
+                    <ImageView
+                        android:id="@+id/headerIndicatorLog"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|end"
+                        android:layout_marginStart="@dimen/layout_16dp"
+                        android:adjustViewBounds="true"
+                        app:srcCompat="@drawable/ic_expansion_header_indicator_grey_24dp"
+                        android:contentDescription="@string/description_button_expand"/>
+
+
+                </com.github.florent37.expansionpanel.ExpansionHeader>
+
+                <com.github.florent37.expansionpanel.ExpansionLayout
+                    android:id="@+id/expansionLayoutLog"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <!-- CONTENT -->
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="@dimen/layout_25dp"
+                            android:paddingEnd="@dimen/layout_25dp"
+                            android:text="@string/text_log_info"
+                            android:textColor="?android:attr/textColorSecondary" />
+
+                    </LinearLayout>
+
+                </com.github.florent37.expansionpanel.ExpansionLayout>
+
+                <com.github.florent37.expansionpanel.ExpansionHeader
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/layout_15dp"
+                    app:expansion_headerIndicator="@id/headerIndicatorApp"
+                    app:expansion_layout="@id/expansionLayoutApp"
+                    app:expansion_toggleOnClick="true">
+
+                    <!-- HEADER -->
+                    <!--LOGS-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/ic_adb"
+                        android:drawableTint="?android:attr/textColorPrimary"
+                        android:text="@string/title_app"
+                        android:textColor="?android:attr/textColorPrimary"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <!-- HEADER INDICATOR -->
+                    <ImageView
+                        android:id="@+id/headerIndicatorApp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|end"
+                        android:layout_marginStart="@dimen/layout_16dp"
+                        android:adjustViewBounds="true"
+                        app:srcCompat="@drawable/ic_expansion_header_indicator_grey_24dp"
+                        android:contentDescription="@string/description_button_expand"/>
+
+
+                </com.github.florent37.expansionpanel.ExpansionHeader>
+
+                <com.github.florent37.expansionpanel.ExpansionLayout
+                    android:id="@+id/expansionLayoutApp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <!-- CONTENT -->
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="@dimen/layout_25dp"
+                            android:paddingEnd="@dimen/layout_25dp"
+                            android:text="@string/text_support_info"
+                            android:textColor="?android:attr/textColorSecondary" />
+
+                    </LinearLayout>
+
+                </com.github.florent37.expansionpanel.ExpansionLayout>
+
+            </LinearLayout>
+
+        </com.github.florent37.expansionpanel.ExpansionLayout>
+
+    </LinearLayout>
+
+</ScrollView>

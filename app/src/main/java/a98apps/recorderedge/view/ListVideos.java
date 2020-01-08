@@ -9,14 +9,15 @@ import android.media.MediaMetadataRetriever;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.StrictMode;
-import android.support.annotation.NonNull;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
-import android.support.v4.widget.SwipeRefreshLayout;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ListView;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import java.io.File;
 import java.lang.ref.WeakReference;
@@ -30,15 +31,17 @@ import java.util.concurrent.TimeUnit;
 
 import a98apps.recorderedge.R;
 import a98apps.recorderedge.constants.Constants;
+import a98apps.recorderedge.record.RecorderController;
 import a98apps.recorderedge.util.CustomListAdapter;
-import a98apps.recorderedge.util.RecordService;
 import a98apps.recorderedge.util.SecurityPreferences;
+import a98apps.recorderedge.util.ThemeMode;
 
 public class ListVideos extends AppCompatActivity {
     private final ViewHolder mViewHolder = new ViewHolder();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        ThemeMode.checkTheme(this, false, true);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_videos);
 
@@ -47,9 +50,9 @@ public class ListVideos extends AppCompatActivity {
 
         Objects.requireNonNull(getSupportActionBar()).setDisplayShowTitleEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
-        getSupportActionBar().setIcon(R.mipmap.ic_list_padding);
+        getSupportActionBar().setIcon(R.drawable.ic_list);
 
-        getSupportActionBar().setTitle(" Videos");
+        getSupportActionBar().setTitle(getString(R.string.title_videos_padding));
 
         if (!hasPermissions(this))
             requestWriteExternalPermission(this);
@@ -133,7 +136,7 @@ public class ListVideos extends AppCompatActivity {
                 ArrayList<File> inFiles = new ArrayList<>();
                 File[] files;
                 files = parentDir.listFiles();
-                String actualVideo = RecordService.getFilePathTemp() != null ? RecordService.getFilePathTemp() : "none";
+                String actualVideo = RecorderController.getFilePathTemp() != null ? RecorderController.getFilePathTemp() : "none";
                 if (files != null) {
                     for (File file : files) {
                         if (file.getName().endsWith(".mp4") && !file.getPath().equals(actualVideo)) {

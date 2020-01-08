@@ -20,23 +20,44 @@ public class Constants {
     public static final String SHOW_RECORDING_NOTIFICATION = "key_recording_notification";
     public static final String RECORD_PATH = "key_record_path";
     public static final String FILE_FORMAT = "key_file_format";
-    public static final String SHOW_BUTTON_MIC = "key_show_mic";
-    public static final String SHOW_BUTTON_VIDEOS = "key_show_videos";
 
     public static final String DEFAULT_PATH = Environment.getExternalStorageDirectory() + File.separator + "Screen Recorder Edge";
     public static final String DEFAULT_FILE_FORMAT = "yyyyddMM_HHmmss";
     public static final String INTERNAL_STORAGE = "key_internal_storage";
     public static final String READABLE_PATH = "key_readable_path";
 
+    public static final String APP_THEME = "key_app_theme";
+
     public static final int ACTION_NOTIFICATION = 1;
     public static final int ACTION_POPUP = 2;
     public static final int ACTION_VIDEOS = 3;
+
+    //---------------------COLORS--------------------------
+
+    public static final String PANEL_COLOR = "key_panel_color";
+    public static final String BUTTON_REC_COLOR = "key_button_rec_theme";
+    public static final String LIST_ICON_COLOR = "key_list_icon_color";
+    public static final String SETTINGS_ICON_COLOR = "key_settings_icon_color";
+
+    //-------------------------------------------------
+
+    //---------------------THEME--------------------------
+
+    public static final int THEME_SYSTEM = 0;
+    public static final int THEME_LIGHT = 1;
+    public static final int THEME_DARK = 2;
+
+    //-------------------------------------------------
+
+    //---------------------CONFIG---------------------------
 
     public static float ASPECT_RATIO = 0;
     public static int WIDTH = 0;
     public static int HEIGHT = 0;
     public static int DENSITY = 0;
     public static boolean LANDSCAPE = false;
+
+    //-------------------------------------------------
 
     public static final String ACTION_REMOTE_CLICK = "a98apps.recorderedge.action.ACTION_REMOTE_CLICK";
     public static final String INTENT_REQUEST_PATH = "a98apps.recorderedge.action.ACTION_REQUEST_STORAGE";

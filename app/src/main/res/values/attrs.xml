@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="borderListVideosColor" format="reference|color" />
+    <attr name="dividerListVideosColor" format="reference|color" />
+    <attr name="listVideosBackgroundColor" format="reference|color" />
+</resources>

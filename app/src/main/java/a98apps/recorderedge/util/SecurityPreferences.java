@@ -2,7 +2,8 @@ package a98apps.recorderedge.util;
 
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.preference.PreferenceManager;
+
+import androidx.preference.PreferenceManager;
 
 import a98apps.recorderedge.constants.Constants;
 import a98apps.recorderedge.R;
@@ -20,10 +21,8 @@ public class SecurityPreferences
         switch (key)
         {
             case Constants.INITIALIZED:
-            case Constants.SHOW_BUTTON_MIC:
                 return String.valueOf(this.mSharedPreferences.getBoolean(key, false));
             case Constants.RECORD_MIC:
-            case Constants.SHOW_BUTTON_VIDEOS:
             case Constants.SHOW_RECORDING_NOTIFICATION:
             case Constants.INTERNAL_STORAGE:
                 return String.valueOf(this.mSharedPreferences.getBoolean(key, true));
@@ -32,6 +31,8 @@ public class SecurityPreferences
             case Constants.HEVC_RESOLUTION:
             case Constants.VIDEO_QUALITY:
             case Constants.VIDEO_ORIENTATION:
+            case Constants.BUTTON_REC_COLOR:
+            case Constants.APP_THEME:
                 return this.mSharedPreferences.getString(key, "0");
             case Constants.VIDEO_ENCODER:
                 return this.mSharedPreferences.getString(key, "5");
@@ -49,6 +50,11 @@ public class SecurityPreferences
                 return this.mSharedPreferences.getString(key, Constants.DEFAULT_FILE_FORMAT);
             case Constants.READABLE_PATH:
                 return this.mSharedPreferences.getString(key, this.mSharedPreferences.getString(Constants.RECORD_PATH, Constants.DEFAULT_PATH));
+            case Constants.PANEL_COLOR:
+                return String.valueOf(this.mSharedPreferences.getInt(key, 0x59323338));
+            case Constants.LIST_ICON_COLOR:
+            case Constants.SETTINGS_ICON_COLOR:
+                return String.valueOf(this.mSharedPreferences.getInt(key, 0xFFFFFFFF));
             default:
                 return this.mSharedPreferences.getString(key,"");
         }
@@ -67,7 +73,7 @@ public class SecurityPreferences
 
         if(!mSharedPreferences.contains(Constants.INITIALIZED))
         {
-            PreferenceManager.setDefaultValues(context, R.xml.pref_main, false);
+            PreferenceManager.setDefaultValues(context, R.xml.root_preferences, false);
             SharedPreferences.Editor ed;
             ed = mSharedPreferences.edit();
             ed.putBoolean(Constants.INITIALIZED, true);
@@ -103,17 +109,6 @@ public class SecurityPreferences
                 ed.apply();
             }
 
-            if(!mSharedPreferences.contains(Constants.SHOW_BUTTON_MIC)) {
-                ed = mSharedPreferences.edit();
-                ed.putBoolean(Constants.SHOW_BUTTON_MIC, false);
-                ed.apply();
-            }
-
-            if(!mSharedPreferences.contains(Constants.SHOW_BUTTON_VIDEOS)) {
-                ed = mSharedPreferences.edit();
-                ed.putBoolean(Constants.SHOW_BUTTON_VIDEOS, true);
-                ed.apply();
-            }
 
             if(!mSharedPreferences.contains(Constants.INTERNAL_STORAGE)) {
                 ed = mSharedPreferences.edit();
@@ -183,6 +178,36 @@ public class SecurityPreferences
             if(!mSharedPreferences.contains(Constants.AUDIO_ENCODER)) {
                 ed = mSharedPreferences.edit();
                 ed.putString(Constants.AUDIO_ENCODER, "3");
+                ed.apply();
+            }
+
+            if(!mSharedPreferences.contains(Constants.PANEL_COLOR)) {
+                ed = mSharedPreferences.edit();
+                ed.putInt(Constants.PANEL_COLOR, 0x59323338);
+                ed.apply();
+            }
+
+            if(!mSharedPreferences.contains(Constants.LIST_ICON_COLOR)) {
+                ed = mSharedPreferences.edit();
+                ed.putInt(Constants.LIST_ICON_COLOR, 0xFFFFFFFF);
+                ed.apply();
+            }
+
+            if(!mSharedPreferences.contains(Constants.SETTINGS_ICON_COLOR)) {
+                ed = mSharedPreferences.edit();
+                ed.putInt(Constants.SETTINGS_ICON_COLOR, 0xFFFFFFFF);
+                ed.apply();
+            }
+
+            if(!mSharedPreferences.contains(Constants.BUTTON_REC_COLOR)) {
+                ed = mSharedPreferences.edit();
+                ed.putString(Constants.BUTTON_REC_COLOR, "0");
+                ed.apply();
+            }
+
+            if(!mSharedPreferences.contains(Constants.APP_THEME)) {
+                ed = mSharedPreferences.edit();
+                ed.putString(Constants.APP_THEME, "0");
                 ed.apply();
             }
         }

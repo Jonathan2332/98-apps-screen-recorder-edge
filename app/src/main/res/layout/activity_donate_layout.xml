@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.DonateActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_favorite"
+            android:drawableTint="@color/colorAccent"
+            android:paddingTop="@dimen/layout_15dp"
+            android:text="@string/text_thanks_for_support"
+            android:textColor="?android:attr/textColorPrimary"
+            android:textSize="@dimen/text_16sp"
+            android:textStyle="bold" />
+
+        <ProgressBar
+            android:id="@+id/loader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true" />
+
+        <Button
+            android:id="@+id/donate.1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/colorAccent"
+            android:text="@string/text_supports_me"
+            android:textColor="@color/colorWhite"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/donate.2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/colorAccent"
+            android:text="@string/text_supports_me"
+            android:textColor="@color/colorWhite"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/donate.5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/colorAccent"
+            android:text="@string/text_supports_me"
+            android:textColor="@color/colorWhite"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/donate.10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/colorAccent"
+            android:text="@string/text_supports_me"
+            android:textColor="@color/colorWhite"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/donate.20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/colorAccent"
+            android:text="@string/text_supports_me"
+            android:textColor="@color/colorWhite"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/donate.30"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/colorAccent"
+            android:text="@string/text_supports_me"
+            android:textColor="@color/colorWhite"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/donate.40"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/colorAccent"
+            android:text="@string/text_supports_me"
+            android:textColor="@color/colorWhite"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/donate.50"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/colorAccent"
+            android:text="@string/text_supports_me"
+            android:textColor="@color/colorWhite"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/donate.100"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/colorAccent"
+            android:text="@string/text_supports_me"
+            android:textColor="@color/colorWhite"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+</ScrollView>

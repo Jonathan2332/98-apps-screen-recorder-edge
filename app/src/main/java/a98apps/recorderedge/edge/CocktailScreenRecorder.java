@@ -6,10 +6,8 @@ import android.app.PendingIntent;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
-import android.media.projection.MediaProjection;
-import android.media.projection.MediaProjectionManager;
+import android.net.Uri;
 import android.os.Build;
-import android.view.View;
 import android.widget.RemoteViews;
 import android.widget.Toast;
 
@@ -17,24 +15,31 @@ import com.samsung.android.sdk.look.cocktailbar.SlookCocktailManager;
 import com.samsung.android.sdk.look.cocktailbar.SlookCocktailProvider;
 
 import a98apps.recorderedge.R;
-import a98apps.recorderedge.constants.Constants;
-import a98apps.recorderedge.util.RecordService;
-import a98apps.recorderedge.util.RequestPermission;
+import a98apps.recorderedge.record.RecordService;
+import a98apps.recorderedge.permission.RequestPermission;
+import a98apps.recorderedge.record.RecorderController;
 import a98apps.recorderedge.util.SecurityPreferences;
+import a98apps.recorderedge.view.DonateActivity;
+import a98apps.recorderedge.view.HelpActivity;
 import a98apps.recorderedge.view.ListVideos;
 import a98apps.recorderedge.view.SettingsActivity;
 
 import static a98apps.recorderedge.constants.Constants.ACTION_STOP_REC;
 import static a98apps.recorderedge.constants.Constants.ACTION_REMOTE_CLICK;
+import static a98apps.recorderedge.constants.Constants.BUTTON_REC_COLOR;
+import static a98apps.recorderedge.constants.Constants.LIST_ICON_COLOR;
 import static a98apps.recorderedge.constants.Constants.NOTIFICATION_CHANNEL_ID_FINISHED;
 import static a98apps.recorderedge.constants.Constants.NOTIFICATION_CHANNEL_ID_RECORDING;
+import static a98apps.recorderedge.constants.Constants.PANEL_COLOR;
+import static a98apps.recorderedge.constants.Constants.RECORD_MIC;
+import static a98apps.recorderedge.constants.Constants.SETTINGS_ICON_COLOR;
+import static a98apps.recorderedge.record.RecorderController.mMediaProjection;
 
 public class CocktailScreenRecorder extends SlookCocktailProvider {
 
-    private static RemoteViews mClickStateView = null;
+    private static RemoteViews mStateView = null;
+    private static RemoteViews mAreaStateView = null;
 
-    public static MediaProjection mMediaProjection;
-    public static MediaProjectionManager mProjectionManager;
     private SecurityPreferences mSecurityPreferences;
 
     @Override
@@ -57,10 +62,7 @@ public class CocktailScreenRecorder extends SlookCocktailProvider {
             }
         }
 
-        if(mClickStateView == null) {
-            mClickStateView = createStateView(context);
-        }
-        cocktailManager.updateCocktail(cocktailIds[0], mClickStateView);
+        initDecorations(context, mSecurityPreferences);
     }
 
     @Override
@@ -78,16 +80,18 @@ public class CocktailScreenRecorder extends SlookCocktailProvider {
         stateView.setOnClickPendingIntent(R.id.button_rec, getClickIntent(context, R.id.button_rec));
         stateView.setOnClickPendingIntent(R.id.button_settings, getClickIntent(context, R.id.button_settings));
         stateView.setOnClickPendingIntent(R.id.button_list, getClickIntent(context, R.id.button_list));
+
+        return stateView;
+    }
+    private RemoteViews createAreaStateView(Context context) {
+        RemoteViews stateView = new RemoteViews(context.getPackageName(),
+                R.layout.cocktail_layout_area);
+
+        stateView.setOnClickPendingIntent(R.id.button_rate, getClickIntent(context, R.id.button_rate));
+        stateView.setOnClickPendingIntent(R.id.button_settings, getClickIntent(context, R.id.button_settings));
+        stateView.setOnClickPendingIntent(R.id.button_help, getClickIntent(context, R.id.button_help));
+        stateView.setOnClickPendingIntent(R.id.button_donate, getClickIntent(context, R.id.button_donate));
         stateView.setOnClickPendingIntent(R.id.button_mic, getClickIntent(context, R.id.button_mic));
-
-        if(mSecurityPreferences == null)
-            mSecurityPreferences = new SecurityPreferences(context);
-
-        if(Boolean.parseBoolean(mSecurityPreferences.getSetting(Constants.SHOW_BUTTON_MIC)))
-            stateView.setViewVisibility(R.id.button_mic, View.VISIBLE);
-
-        if(Boolean.parseBoolean(mSecurityPreferences.getSetting(Constants.SHOW_BUTTON_VIDEOS)))
-            stateView.setViewVisibility(R.id.button_list, View.VISIBLE);
 
         return stateView;
     }
@@ -101,7 +105,8 @@ public class CocktailScreenRecorder extends SlookCocktailProvider {
     private void performClick(Context context, Intent intent)
     {
         int id = intent.getIntExtra("id", -1);
-        switch (id) {
+        switch (id)
+        {
             case R.id.button_rec:
                 if (mMediaProjection == null)
                 {
@@ -121,23 +126,34 @@ public class CocktailScreenRecorder extends SlookCocktailProvider {
                 context.startActivity(new Intent(context, ListVideos.class)
                         .setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK));
                 break;
+            case R.id.button_help:
+                context.startActivity(new Intent(context, HelpActivity.class)
+                        .setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK));
+                break;
+            case R.id.button_donate:
+                context.startActivity(new Intent(context, DonateActivity.class)
+                        .setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK));
+                break;
             case R.id.button_mic:
                 if (mMediaProjection != null)
                 {
                     Toast.makeText(context, context.getString(R.string.warning_mic_while_recording), Toast.LENGTH_LONG).show();
                     return;
                 }
+
+                checkPanel(context);
+
                 if(mSecurityPreferences == null)
                     mSecurityPreferences = new SecurityPreferences(context);
 
-                boolean record = Boolean.parseBoolean(mSecurityPreferences.getSetting(Constants.RECORD_MIC));
+                toggleMicrophone(context, Boolean.parseBoolean(mSecurityPreferences.getSetting(RECORD_MIC)), mSecurityPreferences);
 
-                if (record)
-                    mSecurityPreferences.saveSetting(Constants.RECORD_MIC, String.valueOf(false));
-                else
-                    mSecurityPreferences.saveSetting(Constants.RECORD_MIC, String.valueOf(true));
-
-                updateButtonMic(context, !record);
+                updatePanel(context);
+                break;
+            case R.id.button_rate:
+                Intent i = new Intent(Intent.ACTION_VIEW);
+                i.setData(Uri.parse(context.getString(R.string.url_rate)));
+                context.startActivity(i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
                 break;
             default:
                 break;
@@ -149,42 +165,135 @@ public class CocktailScreenRecorder extends SlookCocktailProvider {
     {
         SlookCocktailManager cocktailManager = SlookCocktailManager.getInstance(context);
         int[] cocktailIds = cocktailManager.getCocktailIds(new ComponentName(context, CocktailScreenRecorder.class));
-        if(mClickStateView == null)
-            mClickStateView = createStateView(context);
+        if(mStateView == null)
+            mStateView = createStateView(context);
 
-        if (isRecording)
-            mClickStateView.setImageViewResource(R.id.button_rec, R.mipmap.ic_button_stop);
-        else
-            mClickStateView.setImageViewResource(R.id.button_rec, R.mipmap.ic_button_rec);
+        checkButtonColor(context, isRecording);
 
-        cocktailManager.updateCocktail(cocktailIds[0], mClickStateView);
+        cocktailManager.updateCocktail(cocktailIds[0], mStateView);
     }
-    public void updateButtonMic(Context context, boolean record)
+
+    private void checkPanel(Context context)
+    {
+        if(mStateView == null || mAreaStateView == null) {
+
+            SlookCocktailManager cocktailManager = SlookCocktailManager.getInstance(context);
+            int[] cocktailIds = cocktailManager.getCocktailIds(new ComponentName(context, CocktailScreenRecorder.class));
+
+            if(mStateView == null)
+                mStateView = createStateView(context);
+
+            if(mAreaStateView == null)
+                mAreaStateView = createAreaStateView(context);
+
+            cocktailManager.updateCocktail(cocktailIds[0], mStateView, mAreaStateView);
+        }
+    }
+    private void updatePanel(Context context)
     {
         SlookCocktailManager cocktailManager = SlookCocktailManager.getInstance(context);
         int[] cocktailIds = cocktailManager.getCocktailIds(new ComponentName(context, CocktailScreenRecorder.class));
-        if(mClickStateView == null)
-            mClickStateView = createStateView(context);
+
+        if(mStateView == null)
+            mStateView = createStateView(context);
+
+        if(mAreaStateView == null)
+            mAreaStateView = createAreaStateView(context);
+
+        cocktailManager.updateCocktail(cocktailIds[0], mStateView, mAreaStateView);
+    }
+
+    public void initDecorations(Context context, SecurityPreferences mSecurityPreferences)
+    {
+        checkPanel(context);
+
+        mStateView.setInt(R.id.panel, "setBackgroundColor", Integer.parseInt(mSecurityPreferences.getSetting(PANEL_COLOR)));
+        mStateView.setInt(R.id.button_settings, "setColorFilter", Integer.parseInt(mSecurityPreferences.getSetting(SETTINGS_ICON_COLOR)));
+        mStateView.setInt(R.id.button_list, "setColorFilter", Integer.parseInt(mSecurityPreferences.getSetting(LIST_ICON_COLOR)));
+
+        checkButtonColor(context, RecorderController.getFilePathTemp() != null);
+
+        toggleMicrophone(context, false, mSecurityPreferences);
+
+        updatePanel(context);
+    }
+
+    public void setDecorations(Context context, int id, int color)
+    {
+        checkPanel(context);
+
+        if(id == R.id.panel)
+            mStateView.setInt(id, "setBackgroundColor", color);
+        else if(id == R.id.button_rec)
+            checkButtonColor(context, RecorderController.getFilePathTemp() != null, color);
+        else
+            mStateView.setInt(id, "setColorFilter", color);
+
+        updatePanel(context);
+
+    }
+
+    private void toggleMicrophone(Context context, boolean record, SecurityPreferences mSecurityPreferences)
+    {
 
         if (record)
-            mClickStateView.setImageViewResource(R.id.button_mic, R.drawable.ic_mic_on);
-        else
-            mClickStateView.setImageViewResource(R.id.button_mic, R.drawable.ic_mic_off);
+        {
+            mSecurityPreferences.saveSetting(RECORD_MIC, String.valueOf(false));
 
-        cocktailManager.updateCocktail(cocktailIds[0], mClickStateView);
+            mAreaStateView.setTextViewCompoundDrawables(R.id.button_mic, R.drawable.ic_mic_off, 0, 0, 0);
+            mAreaStateView.setTextViewText(R.id.button_mic,context.getString(R.string.title_mic_off));
+        }
+        else
+        {
+            mSecurityPreferences.saveSetting(RECORD_MIC, String.valueOf(true));
+
+            mAreaStateView.setTextViewCompoundDrawables(R.id.button_mic, R.drawable.ic_mic_on, 0, 0, 0);
+            mAreaStateView.setTextViewText(R.id.button_mic,context.getString(R.string.title_mic_on));
+        }
     }
-    public void updateButtons(Context context, int id, boolean show)
+
+
+    private void checkButtonColor(Context context, boolean isRecording)
     {
-        SlookCocktailManager cocktailManager = SlookCocktailManager.getInstance(context);
-        int[] cocktailIds = cocktailManager.getCocktailIds(new ComponentName(context, CocktailScreenRecorder.class));
-        if(mClickStateView == null)
-            mClickStateView = createStateView(context);
+        if(mSecurityPreferences == null)
+            mSecurityPreferences = new SecurityPreferences(context);
 
-        if (show)
-            mClickStateView.setViewVisibility(id, View.VISIBLE);
+        if (isRecording)
+        {
+            if(Integer.parseInt(mSecurityPreferences.getSetting(BUTTON_REC_COLOR)) == 0)
+                mStateView.setImageViewResource(R.id.button_rec, R.mipmap.ic_button_stop);
+            else
+                mStateView.setImageViewResource(R.id.button_rec, R.mipmap.ic_button_stop_dark);
+
+        }
         else
-            mClickStateView.setViewVisibility(id, View.GONE);
+        {
+            if(Integer.parseInt(mSecurityPreferences.getSetting(BUTTON_REC_COLOR)) == 0)
+                mStateView.setImageViewResource(R.id.button_rec, R.mipmap.ic_button_rec);
+            else
+                mStateView.setImageViewResource(R.id.button_rec, R.mipmap.ic_button_rec_dark);
+        }
+    }
 
-        cocktailManager.updateCocktail(cocktailIds[0], mClickStateView);
+    private void checkButtonColor(Context context, boolean isRecording, int mode)
+    {
+        if(mSecurityPreferences == null)
+            mSecurityPreferences = new SecurityPreferences(context);
+
+        if (isRecording)
+        {
+            if(mode == 0)
+                mStateView.setImageViewResource(R.id.button_rec, R.mipmap.ic_button_stop);
+            else
+                mStateView.setImageViewResource(R.id.button_rec, R.mipmap.ic_button_stop_dark);
+
+        }
+        else
+        {
+            if(mode == 0)
+                mStateView.setImageViewResource(R.id.button_rec, R.mipmap.ic_button_rec);
+            else
+                mStateView.setImageViewResource(R.id.button_rec, R.mipmap.ic_button_rec_dark);
+        }
     }
 }

@@ -3,17 +3,81 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorPrimary">@color/colorAccent</item>
+        <item name="colorPrimaryDark">@color/colorAccent</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="dividerListVideosColor">@color/colorWhite</item>
+        <item name="borderListVideosColor">@color/colorBorderLight</item>
+        <item name="listVideosBackgroundColor">@color/colorBackgroundListVideosLight</item>
     </style>
-    <style name="AppThemeList" parent="Theme.AppCompat.Light.DarkActionBar">
+
+    <style name="AppThemeDark" parent="Theme.AppCompat.DayNight.DarkActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorPrimary">@color/colorAccent</item>
+        <item name="colorPrimaryDark">@color/colorAccent</item>
         <item name="colorAccent">@color/colorAccent</item>
-        <item name="android:windowBackground">@color/colorBackground</item>
+
+        <item name="borderListVideosColor">@color/colorBorderDark</item>
+        <item name="dividerListVideosColor">@color/colorGrey</item>
+        <item name="android:textColorPrimary">@color/colorWhite</item>
+        <item name="android:textColorSecondary">@color/colorLightDark</item>
+        <item name="android:windowBackground">@color/colorDarkGrey</item>
+        <item name="listVideosBackgroundColor">@color/colorDarkGrey</item>
     </style>
+    <style name="AppThemeDarkLegacy" parent="Theme.AppCompat.DayNight.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorAccent</item>
+        <item name="colorPrimaryDark">@color/colorAccent</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="borderListVideosColor">@color/colorBorderDark</item>
+        <item name="dividerListVideosColor">@color/colorGrey</item>
+        <item name="android:textColorPrimary">@color/colorWhite</item>
+        <item name="android:textColorSecondary">@color/colorLightDark</item>
+        <item name="android:windowBackground">@color/colorDarkGrey</item>
+        <item name="listVideosBackgroundColor">@color/colorDarkGrey</item>
+        <item name="alertDialogTheme">@style/MyCustomDialogDark</item>
+        <item name="android:textColorTertiary">@color/colorGreyLight</item>
+        <item name="android:textColorAlertDialogListItem">@color/colorWhite</item>
+        <item name="android:listDivider">@color/colorBorderDark</item>
+    </style>
+
+    <style name="AppThemeAmoled" parent="Theme.AppCompat.DayNight.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorAccent</item>
+        <item name="colorPrimaryDark">@color/colorAccent</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="borderListVideosColor">@color/colorBorderDark</item>
+        <item name="dividerListVideosColor">@color/colorBlack</item>
+        <item name="android:textColorPrimary">@color/colorWhite</item>
+        <item name="android:textColorSecondary">@color/colorLightDark</item>
+        <item name="android:windowBackground">@color/colorBlack</item>
+        <item name="listVideosBackgroundColor">@color/colorBlack</item>
+    </style>
+    <style name="AppThemeAmoledLegacy" parent="Theme.AppCompat.DayNight.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorAccent</item>
+        <item name="colorPrimaryDark">@color/colorAccent</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="borderListVideosColor">@color/colorBorderDark</item>
+        <item name="dividerListVideosColor">@color/colorBlack</item>
+        <item name="android:textColorPrimary">@color/colorWhite</item>
+        <item name="android:textColorSecondary">@color/colorLightDark</item>
+        <item name="android:windowBackground">@color/colorBlack</item>
+        <item name="listVideosBackgroundColor">@color/colorBlack</item>
+        <item name="alertDialogTheme">@style/MyCustomDialogDark</item>
+        <item name="android:textColorTertiary">@color/colorGreyLight</item>
+        <item name="android:textColorAlertDialogListItem">@color/colorWhite</item>
+        <item name="android:listDivider">@color/colorBorderDark</item>
+    </style>
+
+    <style name="MyCustomDialogDark" parent="@android:style/Theme.Material.Dialog.NoActionBar">
+        <item name="android:colorAccent">@color/colorAccent</item>
+        <item name="textColorAlertDialogListItem">@color/colorWhite</item>
+    </style>
+
     <style name="Theme.Transparent" parent="android:Theme">
         <item name="android:windowIsTranslucent">true</item>
         <item name="android:windowBackground">@android:color/transparent</item>
@@ -39,5 +103,6 @@
         <item name="android:windowFullscreen">false</item>
         <item name="android:backgroundDimEnabled">true</item>
     </style>
+
 
 </resources>

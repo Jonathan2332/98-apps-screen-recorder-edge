@@ -8,6 +8,8 @@ import android.os.Bundle;
 import java.io.File;
 
 import a98apps.recorderedge.constants.Constants;
+import a98apps.recorderedge.permission.RequestPermission;
+import a98apps.recorderedge.permission.RequestStoragePermission;
 import a98apps.recorderedge.view.SettingsActivity;
 
 public class SelectPath extends Activity {

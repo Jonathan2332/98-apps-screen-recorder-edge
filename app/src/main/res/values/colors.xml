@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#727272</color>
-    <color name="colorPrimaryDark">#727272</color>
     <color name="colorAccent">#FA3E30</color>
-    <color name="colorBackground">#F5F5F5</color>
-    <color name="colorBackgroundCocktail">#59323338</color>
-    <color name="colorDarkGrey">#2C2C2C</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorLightDark">#E6FFFFFF</color>
+    <color name="colorBackgroundCocktailDefault">#59323338</color>
+    <color name="colorBackgroundListVideosLight">#F3F3F3</color>
+    <color name="colorGrey">#303030</color>
+    <color name="colorDarkGrey">#252525</color>
+    <color name="colorBorderLight">#D9A7A7A7</color>
+    <color name="colorBorderDark">#D9646464</color>
+    <color name="colorGreyLight">#D1D1D1</color>
+    <color name="colorBlack">#000000</color>
 </resources>

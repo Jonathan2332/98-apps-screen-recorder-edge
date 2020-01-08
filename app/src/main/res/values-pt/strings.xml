@@ -5,22 +5,19 @@
     <string name="description_edge_single_plus">Gravador de tela simples para o painel edge</string>
     <string name="description_image">Pré-visualização da imagem do vídeo</string>
     <string name="description_list_videos">Botão Listar Vídeos</string>
-    <string name="summary_info_fps">Os vídeos serão gravados a 60 FPS por padrão. Quanto maior a resolução e a qualidade do vídeo, maior será o tamanho do arquivo. Usando o codificador HEVC você irá economizar mais espaço.</string>
-    <string name="summary_rate_app">Avalie o aplicativo na Galaxy Store!</string>
     <string name="summary_record_mic">Grava o áudio externo usando o microfone</string>
     <string name="summary_recording_notification">Gerencie as notificações enquanto grava ou ao terminar</string>
     <string name="title_audio_channel">Canal do Áudio</string>
     <string name="title_audio_quality">Qualidade do Áudio</string>
     <string name="title_finish_action">Ação ao Terminar</string>
-    <string name="title_rate_app">Avalie-nos</string>
+    <string name="title_rate_app">" Avaliar"</string>
     <string name="title_record_mic">Gravar Microfone</string>
     <string name="title_recording_notification">Mostrar Notificações</string>
     <string name="title_video_orientation">Orientação do Vídeo</string>
     <string name="title_video_quality">Qualidade do Vídeo</string>
     <string name="title_video_resolution">Resolução do Vídeo</string>
-    <string name="summary_info_audio">Se a gravação do microfone estiver desabilitada, nenhum áudio será gravado. Gravar apenas o áudio interno (sons do sistema, aplicativos e outros) não é permitido pelo Android/Google de forma nativa. Você só pode gravar o áudio interno usando o microfone.\n\nSe você estiver usando fones de ouvido, o microfone do fone de ouvido será gravado (se disponível) e a configuração da fonte de áudio será ignorada.</string>
     <string name="failed_report_message">"Mensagem: Ocorreu um erro, por favor nos envie um relatório para que possamos indentificar o problema e resolver o mais breve possível.\nLog Message: "</string>
-    <string name="failed_report_message_encoder">"Mensagem: Ocorreu um erro, sugerimos trocar o codificador do vídeo nas configurações e reiniciar o aparelho. Se o problema ainda persistir, por favor nos envie um relatório para identificar o problema e resolver o mais breve possível.\nLog Message: "</string>
+    <string name="failed_report_message_encoder">"Mensagem: Ocorreu um erro, sugerimos trocar o codificador do vídeo nas configurações e reiniciar o aparelho. Se o problema ainda persistir, por favor nos envie um relatório para identificar o problema e resolver o mais breve possível. Log Message: "</string>
 
     <string-array name="pref_finish_action_entries">
         <item>Nenhuma</item>
@@ -87,6 +84,18 @@
         <item>256 Kbps</item>
     </string-array>
 
+    <string-array name="pref_button_rec_theme_entries">
+        <item>Claro</item>
+        <item>Escuro</item>
+    </string-array>
+
+    <string-array name="pref_app_theme_entries">
+        <item>Auto (Sistema)</item>
+        <item>Claro</item>
+        <item>Escuro</item>
+        <item>AMOLED</item>
+    </string-array>
+
     <string name="app_name">Gravador de Tela Edge</string>
     <string name="deleted_successfully">Deletado com sucesso!</string>
     <string name="error_on_delete">Erro ao deletar</string>
@@ -100,7 +109,7 @@
     <string name="notifications_are_disabled">Notificações estão desabilitadas</string>
     <string name="recording_finished">Gravação Terminada</string>
     <string name="share_with">Compartilhar com…</string>
-    <string name="stopped_low_memory">Gravação interrompida, limite máximo do arquivo atingido</string>
+    <string name="stopped_file_limit_memory">Gravação interrompida, limite máximo do arquivo atingido</string>
     <string name="text_delete">Deletar</string>
     <string name="text_delete_caps">DELETAR</string>
     <string name="text_recording">Gravando</string>
@@ -111,7 +120,6 @@
     <string name="text_watch_caps">ASSISTIR</string>
     <string name="video_recorded">Vídeo Gravado</string>
     <string name="what_you_do">O que você deseja fazer?</string>
-    <string name="microphone_in_use">Microfone está sendo usando por outro aplicativo!</string>
     <string name="microphone_permission_needed">Permissão de gravar áudio é necessária para usar o microfone!</string>
     <string name="permission_denied">Permissão Negada</string>
     <string name="text_duration">Duração:</string>
@@ -125,13 +133,13 @@
     <string name="description_notification_recording">Mostra uma notificação enquanto está gravando</string>
     <string name="title_settings_activity">"  Configurações"</string>
     <string name="category_notifications">Notificações</string>
-    <string name="category_other">Outros</string>
-    <string name="text_version">Versão</string>
+    <string name="category_app">Aplicativo</string>
+    <string name="text_version">"Versão "</string>
     <string name="category_video">Vídeo</string>
     <string name="category_audio">Áudio</string>
     <string name="summary_hide_icon">Oculta o aplicativo do menu de aplicativos</string>
-    <string name="text_5_seconds_appear">Pode demorar até 5 segundos para aparecer</string>
-    <string name="text_5_seconds_disappear">Pode demorar até 5 segundos para desaparecer</string>
+    <string name="text_hiding">Ocultando, isso pode levar um tempo</string>
+    <string name="text_enabling">Habilitando, isso pode levar um tempo</string>
     <string name="title_hide_icon">Ocultar Aplicativo</string>
     <string name="enable_the_panel">Ative o painel</string>
     <string name="title_video_encoder">Codificador do Vídeo</string>
@@ -143,8 +151,7 @@
     <string name="title_report_bug">Reportar Bug</string>
     <string name="text_recording_started">Gravação Iniciada</string>
     <string name="tap_to_dismiss">\nToque aqui para dispensar a notificação</string>
-    <string name="text_go">IR</string>
-    <string name="summary_info_size">O tamanho máximo do arquivo de gravação é de 4 GB. Você consegue gravar em média 80 minutos usando uma configuração de qualidade alta. Para aumentar o tempo de gravação, diminua a resolução e a qualidade do vídeo.</string>
+    <string name="text_enable_panel">HABILITAR</string>
     <string name="title_audio_source">Fonte do Áudio</string>
     <string name="text_send">Enviar</string>
     <string name="text_storage">Armazenamento</string>
@@ -160,15 +167,60 @@
     <string name="failed_get_storage">Falha ao acessar o armazenamento</string>
     <string name="failed_grant_permission">Falha ao conceder permissão</string>
     <string name="message_path_not_found">O caminho de armazenamento não existe ou o armazenamento externo não está acessível ou foi excluído, por favor, selecione outro caminho para salvar os arquivos gravados.</string>
-    <string name="summary_info_encoder_h264"><b>Informações Importantes\n\n</b><b>H264</b> é o codificador que consegue gravar em alta definição e em tela cheia, porém se você gravar o vídeo usando este codificador e o vídeo não apresentar imagem nenhuma, sugerimos usar outro codificador.</string>
+    <string name="summary_info_encoder_h264"><b>H264</b> é o codificador que consegue gravar em alta definição e em tela cheia, porém se você gravar o vídeo usando este codificador e o vídeo não apresentar imagem nenhuma, sugerimos usar outro codificador.</string>
     <string name="summary_info_encoder_hevc"><b>HEVC</b> é o codificador mais eficiente e recomendado caso você queira economizar mais espaço, porém é possível que você não consiga reproduzir vídeos HEVC em outros dispositivos ou compartilhá-los online.</string>
-    <string name="summary_info_encoder_mpeg4"><b>MPEG4</b> é o codificador mais limitado em resolução, suporta de 360p até 900p de resolução em tela cheia e 960p em 2:1 e 1080p em 16:9 (não em tela cheia). É possível que seu dispositivo não consiga usar este codificador.</string>
+    <string name="summary_info_encoder_mpeg4"><b>MPEG4</b> é o codificador mais limitado em resolução, suporta de 360p até 900p de resolução em tela cheia e 960p em 2:1 e 1080p em 16:9 (não em tela cheia). É possível que seu dispositivo não consiga usar este codificador. Veja mais informações na guia Outros>Dispositivos Snapdragon</string>
     <string name="failed_get_log">Falha ao obter o log</string>
-    <string name="description_button_mic">Botão de habilitar/desabitar gravação do microfone</string>
-    <string name="summary_show_mic">Mostra o botão de habilitar/desabilitar gravação de microfone</string>
-    <string name="summary_show_videos">Exibe o botão da lista de vídeos gravados</string>
     <string name="text_panel">Painel</string>
-    <string name="title_show_mic">Botão Microfone</string>
-    <string name="title_show_videos">Botão Vídeos</string>
     <string name="warning_mic_while_recording">Você não pode usar isso durante a gravação</string>
+    <string name="message_runtime_exception">"Mensagem: Nenhum dado válido de áudio/vídeo foi recebido, sugerimos reiniciar o celular e tentar novamente, se o problema persistir, por favor nos envie um relatório para identificar o problema e resolver o mais breve possível.\nLog Message: "</string>
+    <string name="failed_record_using_microphone">"Mensagem: Não foi possível iniciar a gravação usando o microfone, pode estar em uso por outro aplicativo. Tente iniciar a gravação com o microfone desabilitado."</string>
+    <string name="description_divider">Isto é um divisor</string>
+    <string name="text_help_area_cocktail">" Ajuda"</string>
+    <string name="text_supports_me">"Me apoiar "</string>
+    <string name="text_thanks_for_support">Muito obrigado por me apoiar!</string>
+    <string name="text_thank_you">Obrigado!</string>
+    <string name="text_donate">" Apoiar"</string>
+    <string name="summary_color_list">Altera a cor do ícone da lista de vídeos</string>
+    <string name="summary_color_panel">Altera a cor do painel</string>
+    <string name="summary_color_settings">Altera a cor do ícone de configurações</string>
+    <string name="title_list_color">Cor Videos</string>
+    <string name="title_panel_color">Cor Painel</string>
+    <string name="title_settings_color">Cor Configurações</string>
+    <string name="title_mic_off">" MIC: DESLIGADO"</string>
+    <string name="title_mic_on">" MIC: LIGADO"</string>
+    <string name="description_button_expand">Botão para expandir a guia</string>
+    <string name="title_audio_padding">" Áudio"</string>
+    <string name="title_encoders">Codificadores</string>
+    <string name="title_erros_padding">" Erros"</string>
+    <string name="title_exynos_devices">Dispositivos Exynos</string>
+    <string name="title_file_limit">Limite do Arquivo</string>
+    <string name="title_frame_rate">Taxa de Quadros</string>
+    <string name="title_internal_audio">Áudio Interno</string>
+    <string name="title_microphone">Microfone</string>
+    <string name="title_others_padding">" Outros"</string>
+    <string name="title_quality">Qualidade</string>
+    <string name="title_saving_space">Economizando Espaço</string>
+    <string name="title_snapdragon_devices">Dispositivos Snapdragon</string>
+    <string name="title_storage_padding">" Armazenamento"</string>
+    <string name="text_info_exynos_devices">Em dispositivos com processador Exynos, durante a gravação, o dispositivo pode apresentar lentidão, mas isso não afeta o vídeo. Isso não é um bug ou lag do aplicativo, mas é um problema no codec de vídeo padrão dos processadores Exynos. Essa lentidão ocorre com mais frequência se a configuração do dispositivo estiver usando resolução 1080p ou superior.</string>
+    <string name="text_info_file_limit">O tamanho máximo do arquivo de gravação é de 4 GB, esta é uma limitação do Android. Você pode gravar em média 80 minutos usando uma configuração de alta qualidade. Não há limite de tempo, é uma média até que o arquivo de gravação atinja 4 GB. Para aumentar o tempo de gravação, diminua a resolução e a qualidade do vídeo.</string>
+    <string name="text_info_fps">A taxa de quadros será gravada a 60 FPS ou próximo disso.</string>
+    <string name="text_info_illegal_state_exception">Este erro pode ocorrer ao iniciar ou preparar a gravação. Se ocorrer durante a preparação da gravação, pode ser algum erro de execução no aplicativo. Se isso ocorrer quando você iniciar a gravação, pode ser que: Outro aplicativo esteja usando o microfone (se a gravação do microfone estiver ativada), pode ser um erro de execução do aplicativo, pode ser um erro de hardware ou um erro desconhecido.</string>
+    <string name="text_info_io_exception">Este erro pode ocorrer ao preparar a gravação e está relacionado ao arquivo de vídeo criado para a gravação. O arquivo pode ser inválido ou o diretório é inválido ou o arquivo não existe, ou não há permissão de acesso ao arquivo, ou o arquivo está corrompido e assim por diante.</string>
+    <string name="text_info_microphone">Se a gravação do microfone estiver desativada, nenhum áudio será gravado. Se você estiver usando fones de ouvido, o microfone do fone de ouvido será gravado (se disponível) e a configuração da fonte de áudio será ignorada. Se o microfone estiver sendo usado por outro aplicativo, a gravação não poderá ser iniciada; No Android, o microfone só pode ser usado apenas por um aplicativo por vez para evitar conflitos de hardware.</string>
+    <string name="text_info_snapdragon_devices">Se o seu dispositivo tiver um processador Snapdragon 845 ou superior, o codificador MPEG_4_SP pode não funcionar corretamente no seu dispositivo.</string>
+    <string name="text_info_quality"><![CDATA[Quanto maior a resolução e a qualidade do vídeo, maior o tamanho do arquivo. Leia mais informações sobre o tamanho do arquivo na guia Armazenamento>Limite do Arquivo.\n\nNota: A qualidade gravada pelo Gravador de Tela Edge será a que você definir. Quando você compartilha os vídeos gravados em outros aplicativos, o vídeo pode ter uma qualidade mais baixa, porque o aplicativo em que você está compartilhando pode compactar o tamanho do vídeo, reduzindo sua qualidade. Whatsapp, Telegram e vários outros aplicativos fazem essa compactação.]]></string>
+    <string name="text_internal_audio_info">Gravar apenas o áudio interno (sons do sistema, aplicativos etc.) não é permitida pelo Android/Google de forma nativa por aplicativos de terceiros. Você só pode gravar áudio interno usando o microfone.\n\nNota: Sabemos que o Samsung Game Tools pode gravar áudio interno, mas há uma diferença aqui: a Samsung distribui um Android modificado, oferecendo a capacidade de gravar áudio interno usando o Game Tools. Infelizmente, a Samsung não fornece APIs para aplicativos de terceiros para usar o recurso de gravação de áudio interno.</string>
+    <string name="text_runtime_exception_info">Este erro pode ocorrer se nenhum dado válido de áudio/vídeo foi recebido no final da gravação. Isso pode acontecer se você iniciar e parar a gravação muito rapidamente ou se houver um problema com o arquivo de gravação ou se uma configuração não suportada for usada durante a gravação.</string>
+    <string name="text_saving_space_info"><![CDATA[Usar o codificador HEVC pode economizar mais espaço, pois é um codificador mais eficiente. Leia mais informações sobre este codificador na guia Vídeo>Codificadores.]]></string>
+    <string name="text_select">Selecionar</string>
+    <string name="title_record_theme">Tema do Botão</string>
+    <string name="summary_button_rec_color">Altera o tema do botão de gravar/parar</string>
+    <string name="text_log_info">Quando você reporta um bug pelas configurações ou aparece um popup de erro e você decide reportar o erro, um log é enviado para nós como anexo com informações sobre o funcionamento da aplicação, queremos deixar claro que não coletamos nenhuma informação pessoal nestes logs. Atráves dos logs podemos ver os erros que são lançados pelo nosso aplicativo, facilitando assim o reconhecimento do problema.</string>
+    <string name="title_app">Aplicativo</string>
+    <string name="text_support_info">Este aplicativo é gratuito e não tem anúncios, no entanto, se quiser apoiar o meu trabalho, no aplicativo há uma opção.</string>
+    <string name="title_mic_error">Conflito no Microfone</string>
+    <string name="title_app_theme">Tema do Aplicativo</string>
+    <string name="summary_theme_app">Altera o tema do aplicativo</string>
 </resources>

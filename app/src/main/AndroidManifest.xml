@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     package="a98apps.recorderedge">
 
     <uses-permission android:name="com.samsung.android.providers.context.permission.WRITE_USE_APP_FEATURE_SURVEY" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" tools:node="replace"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" tools:node="replace"/>
-    <uses-permission android:name="android.permission.RECORD_AUDIO" tools:node="replace"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
 
@@ -21,43 +20,45 @@
         android:theme="@style/AppTheme">
 
         <activity
+            android:name=".view.SettingsActivity"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTask"/>
+        <activity
+            android:name=".view.DonateActivity"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".view.HelpActivity"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTask" />
+        <activity
             android:name=".view.ListVideos"
             android:excludeFromRecents="true"
-            android:launchMode="singleInstance"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppThemeList" />
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
         <activity
-            android:name=".util.RequestPermission"
+            android:name=".permission.RequestPermission"
+            android:configChanges="orientation|keyboardHidden|screenSize"
             android:excludeFromRecents="true"
             android:exported="false"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:launchMode="singleInstance"
+            android:launchMode="singleTask"
             android:theme="@style/Theme.Transparent" />
-
         <activity
             android:name=".util.SelectPath"
             android:excludeFromRecents="true"
             android:exported="false"
-            android:launchMode="singleInstance"
+            android:launchMode="singleTask"
             android:theme="@style/Theme.Transparent" />
-
         <activity
-            android:name=".util.RequestStoragePermission"
+            android:name=".permission.RequestStoragePermission"
             android:excludeFromRecents="true"
             android:exported="false"
-            android:launchMode="singleInstance"
+            android:launchMode="singleTask"
             android:theme="@style/Theme.Transparent" />
-
-        <activity
-            android:name=".view.SettingsActivity"
-            android:excludeFromRecents="true"
-            android:launchMode="singleInstance"
-            android:theme="@style/AppTheme"/>
-
         <activity
             android:name=".view.LauncherActivity"
             android:excludeFromRecents="true"
-            android:launchMode="singleInstance"
+            android:launchMode="singleTask"
             android:theme="@style/CustomTheme">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -89,7 +90,11 @@
                 android:resource="@xml/edge_single_plus" />
         </receiver>
 
-        <service android:name=".util.RecordService" />
+        <meta-data
+            android:name="com.samsung.android.cocktail.mode"
+            android:value="edge_single_plus" />
+
+        <service android:name=".record.RecordService" />
         <service android:name=".floating.FrameRateWindow" />
     </application>
 

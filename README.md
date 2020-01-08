@@ -20,3 +20,6 @@ Este é um aplicativo que grava a tela do seu telefone e audio do microfone. Sua
 * [StandOutWindow](https://github.com/pingpongboss/StandOut) (Biblioteca para criar janelas flutuantes)
 * [Edge(Look) SDK](https://developer.samsung.com/galaxy/edge) (SDK da Samsung utilizado para criar painéis edge)
 * [Glide](https://github.com/bumptech/glide) (Para trabalhar com thumbnails dos vídeos gravados)
+* [Google Play Billing Library](https://developer.android.com/google/play/billing/billing_library_overview?hl=pt-br) (Para o sistema de doações)
+* [ExpansionPanel](https://github.com/florent37/ExpansionPanel)
+* [Color Picker](https://github.com/jaredrummler/ColorPicker)

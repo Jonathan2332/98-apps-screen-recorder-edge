@@ -3,10 +3,14 @@
 
     <dimen name="thumb_width">100dp</dimen>
     <dimen name="thumb_height">125dp</dimen>
+    <dimen name="thumb_height_min">135dp</dimen>
 
     <dimen name="text_16sp">16sp</dimen>
     <dimen name="text_18sp">18sp</dimen>
 
+    <dimen name="layout_10dp">10dp</dimen>
+    <dimen name="layout_15dp">15dp</dimen>
+    <dimen name="layout_16dp">16dp</dimen>
     <dimen name="layout_25dp">25dp</dimen>
     <dimen name="layout_50dp">50dp</dimen>
 

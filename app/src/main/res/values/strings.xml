@@ -10,7 +10,7 @@
     <string name="key_recording_notification" translatable="false">key_recording_notification</string>
     <string name="summary_recording_notification">Manage notifications while recording or when finished</string>
     <string name="title_recording_notification">Show Notifications</string>
-    <string name="title_finish_action">Finish Recording Action</string>
+    <string name="title_finish_action">Action on Finish</string>
     <string name="key_finish_action" translatable="false">key_finish_action</string>
     <string name="description_image">Preview Image of Video</string>
     <string name="started" translatable="false">started</string>
@@ -24,10 +24,8 @@
     <string name="title_audio_channel">Audio Channel</string>
     <string name="description_list_videos">Button List Videos</string>
     <string name="description_button_settings">Button Open Settings</string>
-    <string name="summary_rate_app">Rate the app in Play Store!</string>
-    <string name="title_rate_app">Rate us</string>
+    <string name="title_rate_app">" Rate us"</string>
     <string name="title_record_mic">Record Microphone</string>
-    <string name="summary_info_fps">The videos will be recorded in 60 FPS by default. The higher the resolution and the quality of the video, the larger the file size. Using HEVC encoder will save you more space.</string>
     <string name="file_not_exist">The file not exist!</string>
     <string name="error_on_delete">Error on delete</string>
     <string name="deleted_successfully">Deleted successfully!</string>
@@ -46,12 +44,11 @@
     <string name="recording_finished">Recording Finished</string>
     <string name="failed_get_external_storage">Failed to get storage free space</string>
     <string name="failed_create_directory">Failed to create recording directory</string>
-    <string name="stopped_low_memory">Recording stopped, file size limit reached</string>
+    <string name="stopped_file_limit_memory">Recording stopped, file size limit reached</string>
     <string name="little_memory_available">Little memory available</string>
     <string name="failed_prepare_recorder">"Message: An error occurred while starting the recording, please send us a report so we can identify the problem and resolve it as soon as possible.\nError: Failed to prepare the recorder\nLog Message: "</string>
     <string name="text_stop">Stop</string>
     <string name="text_recording">Recording</string>
-    <string name="microphone_in_use">Microphone is already in use from another app!</string>
     <string name="permission_denied">Permission Denied</string>
     <string name="write_permission_needed">Write permission is needed to save recorded file</string>
     <string name="microphone_permission_needed">Record Audio permission is needed to use microphone</string>
@@ -65,15 +62,15 @@
     <string name="description_notification_recording">Displays a notification while recording</string>
     <string name="title_settings_activity">"  Settings"</string>
     <string name="category_notifications">Notifications</string>
-    <string name="category_other">Other</string>
-    <string name="text_version">Version</string>
+    <string name="category_app">App</string>
+    <string name="text_version">"Version "</string>
     <string name="category_audio">Audio</string>
     <string name="category_video">Video</string>
     <string name="key_hide_icon" translatable="false">key_hide_icon</string>
     <string name="summary_hide_icon">Hide the application of launcher</string>
     <string name="title_hide_icon">Hide Application</string>
-    <string name="text_5_seconds_disappear">It may take up to 5 seconds to disappear</string>
-    <string name="text_5_seconds_appear">It may take up to 5 seconds to appear</string>
+    <string name="text_hiding">Hiding, it may take a while</string>
+    <string name="text_enabling">Enabling, it may take a while</string>
     <string name="enable_the_panel">Enable the panel</string>
     <string name="key_video_encoder" translatable="false">key_video_encoder</string>
     <string name="title_video_encoder">Video Encoder</string>
@@ -89,11 +86,9 @@
     <string name="report_bug_error">Couldn\'t find an email app or account</string>
     <string name="text_recording_started">Recording Started</string>
     <string name="tap_to_dismiss">\nTap here to dismiss the notification</string>
-    <string name="text_go">GO</string>
-    <string name="summary_info_size">The maximum recording file size is 4 GB. You can record on average 80 minutes using a high quality setting. To increase recording time, lower the resolution and video quality.</string>
+    <string name="text_enable_panel">ENABLE</string>
     <string name="title_audio_source">Audio Source</string>
     <string name="key_audio_source" translatable="false">key_audio_source</string>
-    <string name="summary_info_audio">If microphone recording is disabled, no audio will be recorded. Recording only internal audio (system sounds, applications, and so on) is not allowed by Android/Google natively. You can only record internal audio using the microphone.\n\nIf you are using headphones, the headset microphone will be recorded (if available) and the audio source setting will be ignored.</string>
     <string name="failed_report_message">"Message: An error occurred, please send us a report so we can identify the problem and resolve it as soon as possible.\nLog Message: "</string>
     <string name="failed_report_message_encoder">"Message: An error has occurred, we suggest you to change the video encoder in the settings and restart the device. If the problem still persists, please send us a report to identify the problem and resolve it as soon as possible.\nLog Message: "</string>
     <string name="text_send">Send</string>
@@ -114,20 +109,23 @@
     <string name="failed_get_storage">Failed to get storage</string>
     <string name="failed_grant_permission">Failed to grant permission</string>
     <string name="message_path_not_found">The storage path not exist or the external storage is not accessible or has been deleted, please, select other path to save the recorded files.</string>
-    <string name="summary_info_encoder_h264"><b>Important Information\'s\n\n</b><b>H264</b> is the encoder that can record in high definition and full screen, however if you record the video using this encoder and the video does not present any image, we suggest using another encoder.</string>
-    <string name="summary_info_encoder_mpeg4"><b>MPEG4</b> is the most limited encoder in resolution, supports 360p up to 900p resolution in full screen and 960p in 2:1 and 1080p in 16:9 (not full screen). Your device may not be able to use this encoder.</string>
+    <string name="summary_info_encoder_h264"><b>H264</b> is the encoder that can record in high definition and full screen, however if you record the video using this encoder and the video does not present any image, we suggest using another encoder.</string>
+    <string name="summary_info_encoder_mpeg4"><b>MPEG4</b> is the most limited encoder in resolution, supports 360p up to 900p resolution in full screen and 960p in 2:1 and 1080p in 16:9 (not full screen). Your device may not be able to use this encoder. See more information in the Others>Snapdragon Devices tab.</string>
     <string name="summary_info_encoder_hevc"><b>HEVC</b> is the more efficient encoder and recommended if you want to save more space, but you may not be able to play HEVC videos on other devices or share them online.</string>
     <string name="failed_get_log">Failed to get log</string>
-    <string name="description_button_mic">Button enable/disable recording mic</string>
     <string name="text_panel">Panel</string>
-    <string name="key_show_mic" translatable="false">key_show_mic</string>
-    <string name="key_show_videos" translatable="false">key_show_videos</string>
-    <string name="summary_show_mic">Shows microphone recording enable/disable button</string>
-    <string name="summary_show_videos">Displays the button of the recorded video list</string>
-    <string name="title_show_videos">Button Videos</string>
-    <string name="title_show_mic">Button Microphone</string>
-    <string name="key_category_audio" translatable="false">key_category_audio</string>
     <string name="warning_mic_while_recording">You cannot use this while recording</string>
+    <string name="message_runtime_exception">"Message: No valid audio/video data has been received, we suggest restarting the phone and trying again. If the problem persists, please send us a report so we can identify the problem and resolve it as soon as possible.\nLog Message: "</string>
+    <string name="failed_record_using_microphone">"Message: Unable to start recording using microphone, may be in use by another application. Try to start recording with the microphone disabled."</string>
+    <string name="text_help_area_cocktail">" Help"</string>
+    <string name="description_divider">Its a divider</string>
+    <string name="title_videos_padding" translatable="false">" Videos"</string>
+    <string name="text_donate">" Support"</string>
+    <string name="text_supports_me">"Supports me "</string>
+    <string name="text_thanks_for_support">Thank very much for support me!</string>
+    <string name="text_thank_you">Thank you!</string>
+    <string name="title_mic_on">" MIC: ON"</string>
+    <string name="title_mic_off">" MIC: OFF"</string>
 
     <string-array name="pref_finish_action_entries">
         <item>Nothing</item>
@@ -354,5 +352,80 @@
         <item>MM-dd-yy_HH-mm-ss</item>
         <item>MM-dd-yyyy_HH-mm-ss</item>
     </string-array>
+
+    <string-array name="pref_button_rec_theme_values">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+
+    <string-array name="pref_button_rec_theme_entries">
+        <item>Light</item>
+        <item>Dark</item>
+    </string-array>
+
+    <string-array name="pref_app_theme_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string-array name="pref_app_theme_entries">
+        <item>Auto (System)</item>
+        <item>Light</item>
+        <item>Dark</item>
+        <item>AMOLED</item>
+    </string-array>
+
+    <string name="key_panel_color" translatable="false">key_panel_color</string>
+    <string name="summary_color_panel">Change the color of panel</string>
+    <string name="title_panel_color">Panel Color</string>
+    <string name="key_list_icon_color" translatable="false">key_list_icon_color</string>
+    <string name="summary_color_list">Change the color of list videos icon</string>
+    <string name="title_list_color">Videos Color</string>
+    <string name="key_settings_icon_color" translatable="false">key_settings_icon_color</string>
+    <string name="summary_color_settings">Change the color of settings icon</string>
+    <string name="title_settings_color">Settings Color</string>
+    <string name="title_encoders">Encoders</string>
+    <string name="description_button_expand">Button to expand tab</string>
+    <string name="title_quality">Quality</string>
+    <string name="text_info_quality"><![CDATA[The higher the resolution and the quality of the video, the larger the file size. Read more information about the file size on the Storage>File Limit tab.\n\nNote: The quality recorded by the Edge Screen Recorder will be what you set. When you share the videos you have recorded in other apps, the video may be of poorer quality because the app you are sharing in may compress the video size, thereby reducing its quality. Whatsapp, Telegram and several other applications do this compression.]]></string>
+    <string name="title_frame_rate">Frame Rate</string>
+    <string name="text_info_fps">The frame rate will be recorded at or near 60 FPS.</string>
+    <string name="title_audio_padding">" Audio"</string>
+    <string name="title_internal_audio">Internal Audio</string>
+    <string name="text_internal_audio_info">Recording only internal audio (system sounds, applications, and so on) is not allowed by Android/Google natively by third-party applications. You can only record internal audio using the microphone.\n\nNote: We know that Samsung Game Tools can record internal audio, but there is a difference here, Samsung distributes a modified Android, thus giving itself the ability to record internal audio using Game Tools. Unfortunately Samsung does not provide any APIs for third party applications to use the built-in audio recording feature.</string>
+    <string name="title_microphone">Microphone</string>
+    <string name="text_info_microphone">If microphone recording is disabled, no audio will be recorded. If you are using headphones, the headset microphone will be recorded (if available) and the audio source setting will be ignored. If the microphone is being used by another application, recording cannot be started; On Android, the microphone can only be used by one application at a time to avoid hardware conflict.</string>
+    <string name="title_storage_padding">" Storage"</string>
+    <string name="title_file_limit">File Limit</string>
+    <string name="text_info_file_limit">The maximum recording file size is 4 GB, this is a limitation of Android. You can record on average 80 minutes using a high quality setting. There is no time limit, this is an average until the recording file reaches 4GB. To increase recording time, lower the resolution and video quality.</string>
+    <string name="title_saving_space">Saving Space</string>
+    <string name="text_saving_space_info"><![CDATA[Using the HEVC encoder can save more space because it is a more efficient encoder. Read more information about this encoder in the Video>Encoders tab.]]></string>
+    <string name="title_erros_padding">" Errors"</string>
+    <string name="title_illegal_state_exception" translatable="false">IllegalStateException</string>
+    <string name="text_info_illegal_state_exception">This error may occur when starting or preparing the recording. If it occurs during the preparation of the recording, it may be some runtime error in the application. If this occurs when you start recording, it may be that: Another application is using the microphone (if microphone recording is enabled), could be an application execution error, could be a hardware error or an unknown error.</string>
+    <string name="title_runtime_exception" translatable="false">Runtime Exception</string>
+    <string name="text_runtime_exception_info">This error can occur if no valid audio/video data was received at the end of recording. This can happen if you start and stop recording too quickly, or if there is a problem with the recording file or an unsupported setting was used during recording.</string>
+    <string name="title_io_exception" translatable="false">IO Exception</string>
+    <string name="title_others_padding">" Others"</string>
+    <string name="title_exynos_devices">Exynos Devices</string>
+    <string name="title_snapdragon_devices">Snapdragon Devices</string>
+    <string name="text_info_io_exception">This error can occur when preparing the recording and is related to the video file created for the recording. The file may be invalid, or the directory is invalid, or the file does not exist, or the file is not allowed to access, or the file is corrupted and so on.</string>
+    <string name="text_info_exynos_devices">On devices with an Exynos processor, during recording, the device may be slow, but this does not affect the video. This is not an application bug or lag, but it is a problem in the standard video codec of the Exynos processors. This slowdown is more often occurring if your device setting is using 1080p or higher resolution.</string>
+    <string name="text_info_snapdragon_devices">If your device has Snapdragon processor 845 or above, the MPEG_4_SP encoder may not work correctly on your device.</string>
+    <string name="text_select">Select</string>
+    <string name="key_button_rec_theme" translatable="false">key_button_rec_theme</string>
+    <string name="summary_button_rec_color">Change the theme of button rec/stop</string>
+    <string name="title_record_theme">Button Theme</string>
+    <string name="title_video" translatable="false">" Video"</string>
+    <string name="logs" translatable="false">Logs</string>
+    <string name="text_log_info">When you report a bug through the settings or an error popup pops up and you decide to report the error, a log is sent to us as an attachment with information about how the application works, we want to make it clear that we do not collect any personal information in these logs. Through the logs we can see the errors that are released by our application, thus facilitating the recognition of the problem.</string>
+    <string name="text_support_info">This app is free and has no ads, however if you want to support my work there is an option in the app.</string>
+    <string name="title_app">App</string>
+    <string name="title_mic_error">Microphone Conflict</string>
+    <string name="title_app_theme">App Theme</string>
+    <string name="key_app_theme" translatable="false">key_app_theme</string>
+    <string name="summary_theme_app">Change the theme of app</string>
 
 </resources>

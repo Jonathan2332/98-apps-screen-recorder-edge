@@ -23,14 +23,14 @@ public class LauncherActivity extends Activity {
         super.onCreate(null);
         if(!Boolean.parseBoolean(new SecurityPreferences(this).getSetting(Constants.INITIALIZED)))
         {
-            AlertDialog explainsDialog = new AlertDialog.Builder(this).create();
+            final AlertDialog explainsDialog = new AlertDialog.Builder(this).create();
             @SuppressLint("InflateParams") View explains = getLayoutInflater().inflate(R.layout.dialog_explains, null);
             ImageView image = explains.findViewById(R.id.gif);
             Glide.with(this).asGif().load(R.drawable.gif_explains).into(image);
             explainsDialog.setView(explains);
             explainsDialog.setIcon(R.drawable.ic_info);
             explainsDialog.setTitle(getString(R.string.enable_the_panel));
-            explainsDialog.setButton(DialogInterface.BUTTON_POSITIVE, getString(R.string.text_go),
+            explainsDialog.setButton(DialogInterface.BUTTON_POSITIVE, getString(R.string.text_enable_panel),
                     new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int whichButton) {
                             Intent intent = new Intent();
@@ -47,6 +47,13 @@ public class LauncherActivity extends Activity {
                     finish();
                 }
             });
+            explainsDialog.setOnShowListener( new DialogInterface.OnShowListener() {
+                @Override
+                public void onShow(DialogInterface arg0) {
+                    explainsDialog.getButton(AlertDialog.BUTTON_POSITIVE).setTextColor(getColor(R.color.colorAccent));
+                }
+            });
+
             explainsDialog.show();
         }
         else
