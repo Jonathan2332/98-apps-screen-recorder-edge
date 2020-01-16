@@ -34,8 +34,7 @@
         <activity
             android:name=".view.ListVideos"
             android:excludeFromRecents="true"
-            android:launchMode="singleTask"
-            android:screenOrientation="portrait" />
+            android:launchMode="singleTask" />
         <activity
             android:name=".permission.RequestPermission"
             android:configChanges="orientation|keyboardHidden|screenSize"
@@ -80,7 +79,8 @@
             </intent-filter>
         </activity>
 
-        <receiver android:name=".edge.CocktailScreenRecorder">
+        <receiver
+            android:name=".edge.CocktailScreenRecorder">
             <intent-filter>
                 <action android:name="com.samsung.android.cocktail.v2.action.COCKTAIL_UPDATE" />
             </intent-filter>

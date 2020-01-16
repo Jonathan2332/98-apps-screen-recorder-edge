@@ -6,6 +6,7 @@ import android.app.PendingIntent;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.net.Uri;
 import android.os.Build;
 import android.widget.RemoteViews;
@@ -39,16 +40,18 @@ public class CocktailScreenRecorder extends SlookCocktailProvider {
 
     private static RemoteViews mStateView = null;
     private static RemoteViews mAreaStateView = null;
-
-    private SecurityPreferences mSecurityPreferences;
+    private static int nightModeFlags = -1;
+    private static SecurityPreferences mSecurityPreferences;
 
     @Override
     public void onUpdate(Context context, SlookCocktailManager cocktailManager, int[] cocktailIds)
     {
-        if(mSecurityPreferences == null) {
+        if(mSecurityPreferences == null)
             mSecurityPreferences = new SecurityPreferences(context);
-            mSecurityPreferences.checkExist(context);
-        }
+
+        mSecurityPreferences.checkExist(context);
+
+        nightModeFlags = context.getResources().getConfiguration().uiMode & Configuration.UI_MODE_NIGHT_MASK;
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             NotificationManager manager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
@@ -63,6 +66,25 @@ public class CocktailScreenRecorder extends SlookCocktailProvider {
         }
 
         initDecorations(context, mSecurityPreferences);
+    }
+
+
+    @Override
+    public void onVisibilityChanged(Context context, int cocktailId, int visibility) {
+        super.onVisibilityChanged(context, cocktailId, visibility);
+        if(visibility == SlookCocktailManager.COCKTAIL_VISIBILITY_SHOW)
+        {
+            int currentNightModeFlags = context.getResources().getConfiguration().uiMode & Configuration.UI_MODE_NIGHT_MASK;
+            if(currentNightModeFlags != nightModeFlags)
+            {
+                if(mSecurityPreferences == null)
+                    mSecurityPreferences = new SecurityPreferences(context);
+
+                nightModeFlags = context.getResources().getConfiguration().uiMode & Configuration.UI_MODE_NIGHT_MASK;
+
+                initDecorations(context, mSecurityPreferences);
+            }
+        }
     }
 
     @Override

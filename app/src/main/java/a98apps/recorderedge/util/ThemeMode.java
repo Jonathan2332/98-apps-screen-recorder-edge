@@ -3,6 +3,7 @@ package a98apps.recorderedge.util;
 import android.app.Activity;
 import android.content.Context;
 import android.content.res.Configuration;
+import android.os.PowerManager;
 
 import a98apps.recorderedge.R;
 
@@ -47,13 +48,26 @@ public class ThemeMode {
         {
             case THEME_SYSTEM:
             {
+
                 int currentNightMode = activity.getResources().getConfiguration().uiMode & Configuration.UI_MODE_NIGHT_MASK;
 
                 if (currentNightMode == Configuration.UI_MODE_NIGHT_YES)
-                    activity.setTheme(R.style.AppThemeDark);
-                else
-                    activity.setTheme(R.style.AppTheme);
+                {
+                    PowerManager powerManager = (PowerManager) activity.getSystemService(Context.POWER_SERVICE);
+                    if  (powerManager.isPowerSaveMode())
+                        activity.setTheme(R.style.AppThemeAmoled);
+                    else
+                        activity.setTheme(R.style.AppThemeDark);
+                }
 
+                else
+                {
+                    PowerManager powerManager = (PowerManager) activity.getSystemService(Context.POWER_SERVICE);
+                    if  (powerManager.isPowerSaveMode())
+                        activity.setTheme(R.style.AppThemeAmoledLegacy);
+                    else
+                        activity.setTheme(R.style.AppTheme);
+                }
                 break;
             }
             case THEME_LIGHT:

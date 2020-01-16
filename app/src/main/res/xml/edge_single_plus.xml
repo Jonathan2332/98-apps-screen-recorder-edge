@@ -4,5 +4,6 @@
     label="@string/app_name"
     description="@string/description_edge_single_plus"
     cocktailWidth="550"
-    category="normal">
+    category="normal"
+    permitVisibilityChanged="true">
 </cocktail-provider>

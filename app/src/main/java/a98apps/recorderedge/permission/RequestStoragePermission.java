@@ -29,7 +29,6 @@ public class RequestStoragePermission extends Activity {
             path = getIntent().getExtras().getString(Constants.INTENT_REQUEST_PATH, Constants.DEFAULT_PATH);
             activity = getIntent().getExtras().getString(Constants.INTENT_GET_ACTIVITY, null);
         }
-
         StorageVolume volume = sm.getStorageVolume(new File(path));
         if(volume != null)
         {

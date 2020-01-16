@@ -62,7 +62,7 @@
             android:entryValues="@array/pref_mpeg4_resolution_values"
             android:key="@string/key_mpeg_resolution"
             android:title="@string/title_video_resolution"
-            android:icon="@drawable/ic_resolution_icon"/>
+            android:icon="@drawable/ic_resolution_icon" />
 
         <ListPreference
             android:defaultValue="0"
