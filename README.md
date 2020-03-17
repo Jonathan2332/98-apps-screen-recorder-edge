@@ -11,7 +11,7 @@ Este é um aplicativo que grava a tela do seu telefone e audio do microfone. Sua
 
 ### Data de lançamento e fim do suporte
 
-O aplicativo foi lançado em 17 de Março de 2019 (Galaxy Store, 29 de Maio para Play Store) e teve seu suporte encerrado em 17 de Março de 2020 tendo a sua distribuição suspensa na Galaxy Store e Play Store. O projeto foi encerrado com um total de 102.100 downloads na Galaxy Store e um total de 9.385 na Play Store. Este números representam o total de novas aquisições e não o total de usuários ativos.
+O aplicativo foi lançado em 17 de Março de 2019 (Galaxy Store, 29 de Maio para Play Store) e teve seu suporte encerrado em 17 de Março de 2020 tendo a sua distribuição suspensa na Galaxy Store e Play Store. O projeto foi encerrado com um total de 102.100 downloads na Galaxy Store e um total de 9.385 na Play Store. Estes números representam o total de novas aquisições e não o total de usuários ativos.
 
 ### O que foi utilizado:
 
