@@ -33,8 +33,22 @@ O aplicativo foi lançado em 17 de Março de 2019 (Galaxy Store, 29 de Maio para
 
 <hr>
 
-### What was used: [EN]
-### O que foi utilizado: [PT-BR]
+### What was used:
+
+* [Android Studio](https://developer.android.com/studio) (IDE used to develop the app)
+* [Android Asset Studio](http://romannurik.github.io/AndroidAssetStudio/index.html) (to generate custom assets)
+
+<br>
+
+* Java
+* [StandOutWindow](https://github.com/pingpongboss/StandOut) (Lib used to create floating windows)
+* [Edge(Look) SDK](https://developer.samsung.com/galaxy/edge) (Samsung SDk used to create the panel edge)
+* [Glide](https://github.com/bumptech/glide) (To handle the thumbnails of the recorded video)
+* [Google Play Billing Library](https://developer.android.com/google/play/billing/billing_library_overview?hl=pt-br) (Used in donate system)
+* [ExpansionPanel](https://github.com/florent37/ExpansionPanel)
+* [Color Picker](https://github.com/jaredrummler/ColorPicker)
+
+### O que foi utilizado:
 
 * [Android Studio](https://developer.android.com/studio) (IDE utilizada para desenvolver o aplicativo)
 * [Android Asset Studio](http://romannurik.github.io/AndroidAssetStudio/index.html) (Para gerar assets personalizados)
