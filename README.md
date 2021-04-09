@@ -34,8 +34,8 @@ This app was launched on March 17, 2019 (Galaxy Store, 29 May on Play Store) and
 
 **The english text was done by me using my knowledge, so sorry if has some error.**
 
-
-
+<br>
+<br>
 
 ### [PT-BR]
 
