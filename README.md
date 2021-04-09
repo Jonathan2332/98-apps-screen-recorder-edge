@@ -1,5 +1,5 @@
 # ![](https://lh3.googleusercontent.com/qYIbN5LIXCfrQ1Tp-KvmPFTJ72Jw0Cd01LTVI8nNBJOhgDU68C8RSAQyja3S8fydpUA=w912-h512-rw?raw=true "Screen Recorder Edge")
-[EN]
+### [EN]
 
 This project was designed just to be part of my porfolio as a demonstration of experience and learning. This is the third project done by me and may be not updated with my recent knowledge.
 
@@ -15,8 +15,7 @@ This is an app that records the screen of your device and microphone audio. The 
 
 This app was launched on March 17, 2019 (Galaxy Store, 29 May on Play Store) and had its support ended on March 17, 2020. The distribuition has suspended on Galaxy Store and Play Store. The project is ended with a total of 102.100 downloads on Galaxy Store and 9.385 on Play Store. This numbers represents a total of new acquisitions and not the total active users.
 
-[PT-BR]
-<hr>
+### [PT-BR]
 
 Este projeto foi idealizado apenas para fazer parte do meu portfólio como demonstração de experiência e aprendizado. Este foi o terceiro projeto foi por mim e código pode não estar atualizado com meus conhecimentos mais recentes.
 
@@ -34,9 +33,7 @@ O aplicativo foi lançado em 17 de Março de 2019 (Galaxy Store, 29 de Maio para
 
 <hr>
 
-### What was used:
-
-### O que foi utilizado:
+### What was used/O que foi utilizado:
 
 * [Android Studio](https://developer.android.com/studio) (IDE utilizada para desenvolver o aplicativo)
 * [Android Asset Studio](http://romannurik.github.io/AndroidAssetStudio/index.html) (Para gerar assets personalizados)
