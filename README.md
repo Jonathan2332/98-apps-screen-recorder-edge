@@ -3,7 +3,7 @@
 
 This project was designed just to be part of my porfolio as a demonstration of experience and learning. This is the third project done by me and may be not updated with my recent knowledge.
 
-**[Suporte Ended]**
+**[Support Ended]**
 
 **The project has ended.**
 
