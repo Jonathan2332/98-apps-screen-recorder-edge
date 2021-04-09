@@ -34,6 +34,9 @@ This app was launched on March 17, 2019 (Galaxy Store, 29 May on Play Store) and
 
 **The english text was done by me using my knowledge, so sorry if has some error.**
 
+
+
+
 ### [PT-BR]
 
 Este projeto foi idealizado apenas para fazer parte do meu portfólio como demonstração de experiência e aprendizado. Este foi o terceiro projeto foi por mim e código pode não estar atualizado com meus conhecimentos mais recentes.
