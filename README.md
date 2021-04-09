@@ -20,9 +20,6 @@ This app was launched on March 17, 2019 (Galaxy Store, 29 May on Play Store) and
 
 * [Android Studio](https://developer.android.com/studio) (IDE used to develop the app)
 * [Android Asset Studio](http://romannurik.github.io/AndroidAssetStudio/index.html) (to generate custom assets)
-
-<br>
-
 * Java
 * [StandOutWindow](https://github.com/pingpongboss/StandOut) (Lib used to create floating windows)
 * [Edge(Look) SDK](https://developer.samsung.com/galaxy/edge) (Samsung SDk used to create the panel edge)
@@ -53,15 +50,11 @@ Este é um aplicativo que grava a tela do seu telefone e audio do microfone. Sua
 
 O aplicativo foi lançado em 17 de Março de 2019 (Galaxy Store, 29 de Maio para Play Store) e teve seu suporte encerrado em 17 de Março de 2020 tendo a sua distribuição suspensa na Galaxy Store e Play Store. O projeto foi encerrado com um total de 102.100 downloads na Galaxy Store e um total de 9.385 na Play Store. Estes números representam o total de novas aquisições e não o total de usuários ativos.
 
-<hr>
 
 ### O que foi utilizado:
 
 * [Android Studio](https://developer.android.com/studio) (IDE utilizada para desenvolver o aplicativo)
 * [Android Asset Studio](http://romannurik.github.io/AndroidAssetStudio/index.html) (Para gerar assets personalizados)
-
-<br>
-
 * Java
 * [StandOutWindow](https://github.com/pingpongboss/StandOut) (Biblioteca para criar janelas flutuantes)
 * [Edge(Look) SDK](https://developer.samsung.com/galaxy/edge) (SDK da Samsung utilizado para criar painéis edge)
