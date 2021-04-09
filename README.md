@@ -33,12 +33,13 @@ O aplicativo foi lançado em 17 de Março de 2019 (Galaxy Store, 29 de Maio para
 
 <hr>
 
-### What was used/O que foi utilizado:
+### What was used: [EN]
+### O que foi utilizado: [PT-BR]
 
 * [Android Studio](https://developer.android.com/studio) (IDE utilizada para desenvolver o aplicativo)
 * [Android Asset Studio](http://romannurik.github.io/AndroidAssetStudio/index.html) (Para gerar assets personalizados)
 
-<hr>
+<br>
 
 * Java
 * [StandOutWindow](https://github.com/pingpongboss/StandOut) (Biblioteca para criar janelas flutuantes)
